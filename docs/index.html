@@ -191,7 +191,7 @@
                 }
                 console.log("2 " + XMLHttpRequest.prototype.send);
                 setTimeout(function () {
-                    XMLHttpRequest.prototype.send = function () {
+                    XMLHttpRequest.prototype.send = function send() {
                     }
                     console.log("3 " + XMLHttpRequest.prototype.send);
                 }, 3000);
