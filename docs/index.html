@@ -185,16 +185,16 @@
             }
             gameInstance.progress.style.transform = `scaleX(${progress})`;
             if (progress === 1 && !gameInstance.removeTimeout) {
-                console.log("1 " + XMLHttpRequest.prototype.send);
-                XMLHttpRequest.prototype.send = function () {
-                    return false;
-                }
-                console.log("2 " + XMLHttpRequest.prototype.send);
-                setTimeout(function () {
-                    XMLHttpRequest.prototype.send = function send() {
-                    }
-                    console.log("3 " + XMLHttpRequest.prototype.send);
-                }, 3000);
+                // console.log("1 " + XMLHttpRequest.prototype.send);
+                // XMLHttpRequest.prototype.send = function () {
+                //     return false;
+                // }
+                // console.log("2 " + XMLHttpRequest.prototype.send);
+                // setTimeout(function () {
+                //     XMLHttpRequest.prototype.send = function send() {
+                //     }
+                //     console.log("3 " + XMLHttpRequest.prototype.send);
+                // }, 3000);
 
                 gameInstance.removeTimeout = setTimeout(function () {
                     loader.style.display = "none";
