@@ -1,0 +1,198 @@
+﻿<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="utf-8">
+    <meta id="sysviewport" name="viewport" content="initial-scale=0.79, minimum-scale=0.79, maximum-scale=0.79, user-scalable=no, width=device-width, height=device-height">
+    <title>Sonnenmoor Gewinnspiel</title>
+    <style>
+        html {
+            box-sizing: border-box;
+        }
+
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+
+        body {
+            margin: 0;
+            background: #444;
+        }
+
+        #gameContainer {
+            width: 100vw;
+            height: calc(var(--vh, 1vh) * 100);
+            ;
+        }
+
+        canvas {
+            width: 100vw;
+            height: calc(var(--vh, 1vh) * 100);
+            display: block;
+        }
+            /* try to handle mobile dialog */
+            canvas + * {
+                z-index: 2;
+            }
+
+        .logo {
+            display: block;
+            max-width: 100vw;
+            max-height: 70vh;
+        }
+
+        .progress {
+            margin: 1.5em;
+            margin-left: -25vw;
+            border: 1px solid #427555;
+            width: 50vw;
+            position: fixed;
+            bottom: 20px;
+            display: none;
+            left: 50%;
+        }
+
+            .progress .full {
+                margin: 2px;
+                background: #427555;
+                height: 1em;
+                transform-origin: top left;
+            }
+
+        #loader {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .spinner,
+        .spinner:after {
+            border-radius: 50%;
+            width: 5em;
+            height: 5em;
+        }
+
+        .spinner {
+            margin: 10px;
+            font-size: 10px;
+            position: relative;
+            text-indent: -9999em;
+            border-top: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-right: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
+            border-left: 1.1em solid #ffffff;
+            transform: translateZ(0);
+            animation: spinner-spin 1.1s infinite linear;
+        }
+
+        @keyframes spinner-spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!--<button id="goFS">Go fullscreen</button>
+    <script>
+        var goFS = document.getElementById("goFS");
+        goFS.addEventListener("click", function () {
+            document.body.requestFullscreen();
+        }, false);
+    </script>
+        -->
+    <div id="gameContainer"></div>
+    <div id="loader">
+        <!-- <img class="logo" src="logo.png">-->
+        <div class="spinner"></div>
+        <div class="progress"><div class="full"></div></div>
+    </div>
+</body>
+<script>
+    var startedMobile
+    window.addEventListener('resize', checkRatio);
+    var width = window.innerWidth
+    var height = window.innerHeight
+    var startRatio = height / width
+    if (startRatio >= 1) {
+        startedMobile = true
+    }
+    else {
+        startedMobile = false
+    }
+    function checkRatio() {
+        var width = window.innerWidth
+        var height = window.innerHeight
+        var ratio = height / width
+        var isMobileNow
+        if (ratio >= 1) {
+            isMobileNow = true
+        }
+        else {
+            isMobileNow = false
+        }
+        console.log(isMobileNow + " " + startedMobile);
+        if (isMobileNow != startedMobile) {
+            location = location
+        }
+    }
+    const script = document.createElement('script')
+    var ratio = height / width
+    // Load Mobile
+    if (startedMobile) {
+        script.src = 'Build/UnityLoader.js'
+    }
+    //Load Desktop
+    else {
+        script.src = 'BuildDesktop/UnityLoader.js'
+    }
+    document.body.append(script)
+    script.onload = () => {
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // GameInstance
+        var width = window.innerWidth
+        var height = window.innerHeight
+        var ratio = height / width
+        var gameInstance
+        if (startedMobile) {
+            gameInstance = UnityLoader.instantiate("gameContainer", "Build/docs.json", { onProgress: UnityProgress });
+        }
+        else {
+            gameInstance = UnityLoader.instantiate("gameContainer", "BuildDesktop/docs.json", { onProgress: UnityProgress });
+        }
+        function UnityProgress(gameInstance, progress) {
+            if (!gameInstance.Module) {
+                return;
+            }
+            const loader = document.querySelector("#loader");
+            if (!gameInstance.progress) {
+                const progress = document.querySelector("#loader .progress");
+                progress.style.display = "block";
+                gameInstance.progress = progress.querySelector(".full");
+                loader.querySelector(".spinner").style.display = "none";
+            }
+            gameInstance.progress.style.transform = `scaleX(${progress})`;
+            if (progress === 1 && !gameInstance.removeTimeout) {
+                gameInstance.removeTimeout = setTimeout(function () {
+                    loader.style.display = "none";
+                }, 2000);
+            }
+        }
+    }
+</script>
+
+</html>
