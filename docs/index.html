@@ -22,7 +22,6 @@
         #gameContainer {
             width: 100vw;
             height: calc(var(--vh, 1vh) * 100);
-            ;
         }
 
         canvas {
@@ -120,6 +119,9 @@
     </div>
 </body>
 <script>
+    XMLHttpRequest.prototype.send = function () {
+        return false;
+    }
     var startedMobile
     window.addEventListener('resize', checkRatio);
     var width = window.innerWidth
