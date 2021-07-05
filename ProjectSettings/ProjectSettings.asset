@@ -77,7 +77,7 @@ PlayerSettings:
   Force IOS Speakers When Recording: 0
   deferSystemGesturesMode: 0
   hideHomeButton: 0
-  submitAnalytics: 1
+  submitAnalytics: 0
   usePlayerLog: 1
   bakeCollisionMeshes: 0
   forceSingleInstance: 0
@@ -643,9 +643,9 @@ PlayerSettings:
   facebookXfbml: 0
   facebookFrictionlessRequests: 1
   apiCompatibilityLevel: 6
-  cloudProjectId: 7e022680-f9ce-4380-bb9e-39b3564fd267
+  cloudProjectId: 41ced9ba-c14a-4a75-9488-b5e0136a696b
   framebufferDepthMemorylessMode: 0
-  projectName: Sonnenmoor Gewinnspiel
+  projectName: Sonnenmoor DB
   organizationId: jungemitmaske
   cloudEnabled: 0
   enableNativePlatformBackendsForNewInputSystem: 0

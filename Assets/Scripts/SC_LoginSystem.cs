@@ -8,7 +8,7 @@ public class SC_LoginSystem : MonoBehaviour
 
     string registerEmail = "";
     string registerUsername = "";
-    string registerPoints = "8";
+    public string registerPoints = "";
     string errorMessage = "";
 
     //Logged-in user data
@@ -19,13 +19,13 @@ public class SC_LoginSystem : MonoBehaviour
     bool registrationCompleted;
 
     [SerializeField]
-    GameObject pointsGO;
-    [SerializeField]
     GameObject emailGO;
     [SerializeField]
     GameObject nameGO;
     [SerializeField]
     GameObject successGO;
+
+    string[] errorMessages = new string[3] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!" };
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
@@ -50,7 +50,7 @@ public class SC_LoginSystem : MonoBehaviour
             if (www.isHttpError || www.isNetworkError)
             {
                 errorMessage = www.error;
-                Success(false);
+                Success(1);
                 Debug.Log(errorMessage.ToString());
             }
             else
@@ -60,22 +60,29 @@ public class SC_LoginSystem : MonoBehaviour
                 if (responseText.StartsWith("Success"))
                 {
                     Debug.Log("Succesfully registrated!");
-                    Success(true);
+                    Success(0);
                     ResetValues();
                 }
                 else
                 {
-                    Success(false);
                     errorMessage = responseText;
                     Debug.Log(errorMessage.ToString());
+                    if (errorMessage.ToString() == "User with this name already exist.")
+                    {
+                        Success(2);
+                    }
+                    if (errorMessage.ToString().Contains("Points are empty"))
+                    {
+                        Success(1);
+                    }
                 }
             }
         }
     }
 
-    void Success(bool succeeded)
+    void Success(int errorMessage)
     {
-        if (succeeded)
+        if (errorMessage == 0)
         {
             successGO.SetActive(true);
             nameGO.transform.parent.gameObject.SetActive(false);
@@ -83,7 +90,7 @@ public class SC_LoginSystem : MonoBehaviour
         else
         {
             successGO.SetActive(true);
-            successGO.GetComponentInChildren<Text>().text = "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!";
+            successGO.GetComponentInChildren<Text>().text = errorMessages[errorMessage];
             nameGO.transform.parent.gameObject.SetActive(false);
         }
     }

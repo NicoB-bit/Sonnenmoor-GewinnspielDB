@@ -51,6 +51,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     Text textNumberOfCorrectA;
     [SerializeField]
+    Text textFinalScoreRegistrationScreen;
+    [SerializeField]
     TextMeshPro textPointsAchieved;
     [SerializeField]
     TextMeshPro textPointsAchievedPause;
@@ -85,6 +87,8 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     GameObject checkButtonGO;
 
+    [SerializeField]
+    SC_LoginSystem SC_LoginSystemO;
 
     bool secondStage;
 
@@ -255,7 +259,7 @@ public class ButtonManager : MonoBehaviour
     {
         if (counterQuestionsAnswered == 10 && secondStage || counterQuestionsAnswered == 12)
         {
-            textCounter.text = "Frage " + ((counterQuestionsAnswered + 1) - 10) + " von 6";
+            textCounter.text = "Frage " + ((counterQuestionsAnswered + 1) - 10) + "/6";
             gameObject.GetComponent<FadeTextAndImages>().enabled = true;
             if (counterQuestionsAnswered == 12)
             {
@@ -287,6 +291,8 @@ public class ButtonManager : MonoBehaviour
         {
             finishedScreenGO.SetActive(true);
             textPointsAchieved.text = counterCorrectAnswers + "/31 Punkte";
+            textFinalScoreRegistrationScreen.text = counterCorrectAnswers + " Punkte";
+            SC_LoginSystemO.registerPoints = counterCorrectAnswers.ToString();
             quizGO.SetActive(false);
         }
         if (counterQuestionsAnswered != 10 && counterQuestionsAnswered != 16)
