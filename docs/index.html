@@ -119,9 +119,6 @@
     </div>
 </body>
 <script>
-    // XMLHttpRequest.prototype.send = function () {
-    //     return false;
-    // }
     var startedMobile
     window.addEventListener('resize', checkRatio);
     var width = window.innerWidth
@@ -192,6 +189,13 @@
                 XMLHttpRequest.prototype.send = function () {
                     return false;
                 }
+                console.log("2 " + XMLHttpRequest.prototype.send);
+                setTimeout(function () {
+                    XMLHttpRequest.prototype.send = function () {
+                    }
+                    console.log("3 " + XMLHttpRequest.prototype.send);
+                }, 3000);
+
                 gameInstance.removeTimeout = setTimeout(function () {
                     loader.style.display = "none";
                 }, 2000);
