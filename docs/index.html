@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta id="sysviewport" name="viewport" content="initial-scale=0.79, minimum-scale=0.79, maximum-scale=0.79, user-scalable=no, width=device-width, height=device-height">
+    <meta http-equiv="Content-Security-Policy" content="block-all-mixed-content" id="sysviewport" name="viewport" content="initial-scale=0.79, minimum-scale=0.79, maximum-scale=0.79, user-scalable=no, width=device-width, height=device-height">
     <title>Sonnenmoor Gewinnspiel</title>
     <style>
         html {
@@ -120,8 +120,6 @@
     </div>
 </body>
 <script>
-    XMLHttpRequest.prototype.originalOpen = XMLHttpRequest.prototype.closed;
-    ////////
     var startedMobile
     window.addEventListener('resize', checkRatio);
     var width = window.innerWidth
