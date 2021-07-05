@@ -24,6 +24,8 @@ public class SC_LoginSystem : MonoBehaviour
     GameObject emailGO;
     [SerializeField]
     GameObject nameGO;
+    [SerializeField]
+    GameObject successGO;
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
@@ -48,6 +50,7 @@ public class SC_LoginSystem : MonoBehaviour
             if (www.isHttpError || www.isNetworkError)
             {
                 errorMessage = www.error;
+                Success(false);
                 Debug.Log(errorMessage.ToString());
             }
             else
@@ -57,11 +60,12 @@ public class SC_LoginSystem : MonoBehaviour
                 if (responseText.StartsWith("Success"))
                 {
                     Debug.Log("Succesfully registrated!");
+                    Success(true);
                     ResetValues();
-                    registrationCompleted = true;
                 }
                 else
                 {
+                    Success(false);
                     errorMessage = responseText;
                     Debug.Log(errorMessage.ToString());
                 }
@@ -69,6 +73,20 @@ public class SC_LoginSystem : MonoBehaviour
         }
     }
 
+    void Success(bool succeeded)
+    {
+        if (succeeded)
+        {
+            successGO.SetActive(true);
+            nameGO.transform.parent.gameObject.SetActive(false);
+        }
+        else
+        {
+            successGO.SetActive(true);
+            successGO.GetComponentInChildren<Text>().text = "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!";
+            nameGO.transform.parent.gameObject.SetActive(false);
+        }
+    }
 
     void ResetValues()
     {
