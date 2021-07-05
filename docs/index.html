@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -120,6 +120,9 @@
     </div>
 </body>
 <script>
+    let x = document.cookie;
+    console.log(x);
+    ////////
     var startedMobile
     window.addEventListener('resize', checkRatio);
     var width = window.innerWidth
@@ -142,7 +145,6 @@
         else {
             isMobileNow = false
         }
-        console.log(isMobileNow + " " + startedMobile);
         if (isMobileNow != startedMobile) {
             location = location
         }
