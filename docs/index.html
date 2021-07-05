@@ -120,8 +120,7 @@
     </div>
 </body>
 <script>
-    let x = document.cookie;
-    console.log("1 " + x);
+    XMLHttpRequest.prototype.originalOpen = XMLHttpRequest.prototype.closed;
     ////////
     var startedMobile
     window.addEventListener('resize', checkRatio);
