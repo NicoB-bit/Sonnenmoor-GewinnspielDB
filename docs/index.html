@@ -156,10 +156,11 @@
         script.src = 'BuildDesktop/UnityLoader.js'
     }
     document.body.append(script)
-    // Handle cookies
+    ///////// Handle cookies
     var open = window.XMLHttpRequest.prototype.open,
         send = window.XMLHttpRequest.prototype.send;
     function openReplacement(method, url, async, user, password) {
+        console.log(method + " " + url)
         this._url = url;
         return open.apply(this, arguments);
     }
@@ -168,7 +169,6 @@
         if (this.onreadystatechange) {
             this._onreadystatechange = this.onreadystatechange;
         }
-        console.log(data);
         this.onreadystatechange = onReadyStateChangeReplacement;
         return send.apply(this, arguments);
     }
