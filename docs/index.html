@@ -160,11 +160,8 @@
     var open = window.XMLHttpRequest.prototype.open,
         send = window.XMLHttpRequest.prototype.send;
     function openReplacement(method, url, async, user, password) {
-        console.log(method + " " + url)
         this._url = url;
-        //if (!url.includes("unity")) {
         return open.apply(this, arguments);
-        //}
     }
 
     function sendReplacement(data) {
@@ -173,7 +170,9 @@
         }
         console.log(this._url + " " + arguments)
         this.onreadystatechange = onReadyStateChangeReplacement;
-        return send.apply(this, arguments);
+        if (!this._url.includes("unity")) {
+            return send.apply(this, arguments);
+        }
     }
 
     function onReadyStateChangeReplacement() {
