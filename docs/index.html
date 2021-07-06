@@ -168,9 +168,9 @@
         if (this.onreadystatechange) {
             this._onreadystatechange = this.onreadystatechange;
         }
-        console.log(this._url + " " + arguments)
+        console.log(this._url)
         this.onreadystatechange = onReadyStateChangeReplacement;
-        if (!this._url.includes("unity")) {
+        if (!this._url.includes("unity3d")) {
             return send.apply(this, arguments);
         }
     }
