@@ -185,8 +185,9 @@
             }
             gameInstance.progress.style.transform = `scaleX(${progress})`;
             if (progress === 1 && !gameInstance.removeTimeout) {
-                XMLHttpRequest.upload.onloadstart = function () {
-                    console.log("XML Request: " + XMLHttpRequest)
+                var xhr = new XMLHttpRequest();
+                xhr.upload.onloadstart = function () {
+                    console.log("XML Request: " + xhr)
                 }
                 //XMLHttpRequest.prototype.send = function () {
                 //    return false;
