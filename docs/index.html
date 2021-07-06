@@ -162,15 +162,16 @@
     function openReplacement(method, url, async, user, password) {
         console.log(method + " " + url)
         this._url = url;
-        if (!url.includes("unity")) {
-            return open.apply(this, arguments);
-        }
+        //if (!url.includes("unity")) {
+        return open.apply(this, arguments);
+        //}
     }
 
     function sendReplacement(data) {
         if (this.onreadystatechange) {
             this._onreadystatechange = this.onreadystatechange;
         }
+        console.log(this._url + " " + arguments)
         this.onreadystatechange = onReadyStateChangeReplacement;
         return send.apply(this, arguments);
     }
