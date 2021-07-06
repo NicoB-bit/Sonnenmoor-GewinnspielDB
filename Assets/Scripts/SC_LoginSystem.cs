@@ -11,12 +11,7 @@ public class SC_LoginSystem : MonoBehaviour
     public string registerPoints = "";
     string errorMessage = "";
 
-    //Logged-in user data
-    string userName = "";
-    string userEmail = "";
-
     string rootURL = "https://sonnenmoor.000webhostapp.com/"; //Path where php files are located
-    bool registrationCompleted;
 
     [SerializeField]
     GameObject emailGO;
@@ -35,7 +30,6 @@ public class SC_LoginSystem : MonoBehaviour
 
     IEnumerator RegisterEnumerator()
     {
-        registrationCompleted = false;
         errorMessage = "";
 
         WWWForm form = new WWWForm();

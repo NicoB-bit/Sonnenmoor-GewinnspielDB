@@ -22,7 +22,6 @@
         #gameContainer {
             width: 100vw;
             height: calc(var(--vh, 1vh) * 100);
-            ;
         }
 
         canvas {
@@ -30,10 +29,6 @@
             height: calc(var(--vh, 1vh) * 100);
             display: block;
         }
-            /* try to handle mobile dialog */
-            canvas + * {
-                z-index: 2;
-            }
 
         .logo {
             display: block;
@@ -104,17 +99,8 @@
 </head>
 
 <body>
-    <!--<button id="goFS">Go fullscreen</button>
-    <script>
-        var goFS = document.getElementById("goFS");
-        goFS.addEventListener("click", function () {
-            document.body.requestFullscreen();
-        }, false);
-    </script>
-        -->
     <div id="gameContainer"></div>
     <div id="loader">
-        <!-- <img class="logo" src="logo.png">-->
         <div class="spinner"></div>
         <div class="progress"><div class="full"></div></div>
     </div>
@@ -142,7 +128,6 @@
         else {
             isMobileNow = false
         }
-        console.log(isMobileNow + " " + startedMobile);
         if (isMobileNow != startedMobile) {
             location = location
         }
@@ -158,6 +143,30 @@
         script.src = 'BuildDesktop/UnityLoader.js'
     }
     document.body.append(script)
+    ///////// Handle cookies
+    var open = window.XMLHttpRequest.prototype.open,
+        send = window.XMLHttpRequest.prototype.send;
+    function openReplacement(method, url, async, user, password) {
+        this._url = url;
+        return open.apply(this, arguments);
+    }
+    function sendReplacement(data) {
+        if (this.onreadystatechange) {
+            this._onreadystatechange = this.onreadystatechange;
+        }
+        this.onreadystatechange = onReadyStateChangeReplacement;
+        if (!this._url.includes("unity3d")) {
+            return send.apply(this, arguments);
+        }
+    }
+    function onReadyStateChangeReplacement() {
+        if (this._onreadystatechange) {
+            return this._onreadystatechange.apply(this, arguments);
+        }
+    }
+    window.XMLHttpRequest.prototype.open = openReplacement;
+    window.XMLHttpRequest.prototype.send = sendReplacement;
+    // Onload
     script.onload = () => {
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
         let vh = window.innerHeight * 0.01;
@@ -194,5 +203,4 @@
         }
     }
 </script>
-
 </html>
