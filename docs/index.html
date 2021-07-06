@@ -29,10 +29,6 @@
             height: calc(var(--vh, 1vh) * 100);
             display: block;
         }
-            /* try to handle mobile dialog */
-            canvas + * {
-                z-index: 2;
-            }
 
         .logo {
             display: block;
@@ -103,17 +99,8 @@
 </head>
 
 <body>
-    <!--<button id="goFS">Go fullscreen</button>
-    <script>
-        var goFS = document.getElementById("goFS");
-        goFS.addEventListener("click", function () {
-            document.body.requestFullscreen();
-        }, false);
-    </script>
-        -->
     <div id="gameContainer"></div>
     <div id="loader">
-        <!-- <img class="logo" src="logo.png">-->
         <div class="spinner"></div>
         <div class="progress"><div class="full"></div></div>
     </div>
@@ -163,22 +150,16 @@
         this._url = url;
         return open.apply(this, arguments);
     }
-
     function sendReplacement(data) {
         if (this.onreadystatechange) {
             this._onreadystatechange = this.onreadystatechange;
         }
-        console.log(this._url)
         this.onreadystatechange = onReadyStateChangeReplacement;
         if (!this._url.includes("unity3d")) {
             return send.apply(this, arguments);
         }
     }
-
     function onReadyStateChangeReplacement() {
-        /**
-         * PLACE HERE YOUR CODE FOR READYSTATECHANGE
-         */
         if (this._onreadystatechange) {
             return this._onreadystatechange.apply(this, arguments);
         }
@@ -215,15 +196,6 @@
             }
             gameInstance.progress.style.transform = `scaleX(${progress})`;
             if (progress === 1 && !gameInstance.removeTimeout) {
-                // var tempXMLHttpReq = XMLHttpRequest.send;
-                // XMLHttpRequest.prototype.send = function () {
-                //    return false;
-                // }
-                // console.log("2 " + XMLHttpRequest.prototype.send);
-                // setTimeout(function () {
-                //    XMLHttpRequest.prototype.send = tempXMLHttpReq;
-                //    console.log("3 " + XMLHttpRequest.prototype.send);
-                // }, 3000);
                 gameInstance.removeTimeout = setTimeout(function () {
                     loader.style.display = "none";
                 }, 2000);
@@ -231,5 +203,4 @@
         }
     }
 </script>
-
 </html>
