@@ -156,6 +156,34 @@
         script.src = 'BuildDesktop/UnityLoader.js'
     }
     document.body.append(script)
+    // Handle cookies
+    var open = window.XMLHttpRequest.prototype.open,
+        send = window.XMLHttpRequest.prototype.send;
+    function openReplacement(method, url, async, user, password) {
+        this._url = url;
+        return open.apply(this, arguments);
+    }
+
+    function sendReplacement(data) {
+        if (this.onreadystatechange) {
+            this._onreadystatechange = this.onreadystatechange;
+        }
+        console.log(data);
+        this.onreadystatechange = onReadyStateChangeReplacement;
+        return send.apply(this, arguments);
+    }
+
+    function onReadyStateChangeReplacement() {
+        /**
+         * PLACE HERE YOUR CODE FOR READYSTATECHANGE
+         */
+        if (this._onreadystatechange) {
+            return this._onreadystatechange.apply(this, arguments);
+        }
+    }
+    window.XMLHttpRequest.prototype.open = openReplacement;
+    window.XMLHttpRequest.prototype.send = sendReplacement;
+    // Onload
     script.onload = () => {
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
         let vh = window.innerHeight * 0.01;
