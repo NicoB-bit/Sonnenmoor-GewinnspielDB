@@ -185,10 +185,9 @@
             }
             gameInstance.progress.style.transform = `scaleX(${progress})`;
             if (progress === 1 && !gameInstance.removeTimeout) {
-                XMLHttpRequest.prototype.send = function () {
-                    console.log(XMLHttpRequest.name);
-                    return false;
-                }
+                //XMLHttpRequest.prototype.send = function () {
+                //    return false;
+                //}
                 // console.log("2 " + XMLHttpRequest.prototype.send);
                 // setTimeout(function () {
                 //     XMLHttpRequest.prototype.send = function send() {
