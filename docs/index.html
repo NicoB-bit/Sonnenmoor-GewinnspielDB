@@ -99,6 +99,19 @@
 </head>
 
 <body>
+		<script>
+			var gameInstance = undefined;
+
+			function FixInputOnSubmit() {
+				document.getElementById("fixInput").blur();
+				event.preventDefault();
+			}
+		</script>
+		<div>
+			<form onsubmit="FixInputOnSubmit()" autocomplete="off" style="width: 0px; height: 0px; position: absolute; top: -9999px;">
+				<input type="text" id="fixInput" oninput="gameInstance.Module.asmLibraryArg._FixInputUpdate()" onblur="gameInstance.Module.asmLibraryArg._FixInputOnBlur()" style="font-size: 42px;">
+			</form>
+		</div>
     <div id="gameContainer"></div>
     <div id="loader">
         <div class="spinner"></div>
