@@ -170,9 +170,9 @@
         }
         console.log(this._url)
         this.onreadystatechange = onReadyStateChangeReplacement;
-        if (!this._url.includes("https://config.uca.cloud.unity3d.com")) {
-            return send.apply(this, arguments);
-        }
+        //if (!this._url.includes("https://config.uca.cloud.unity3d.com")) {
+        return send.apply(this, arguments);
+        //}
     }
 
     function onReadyStateChangeReplacement() {
