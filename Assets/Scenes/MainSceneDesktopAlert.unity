@@ -3365,6 +3365,7 @@ GameObject:
   - component: {fileID: 931726449}
   - component: {fileID: 931726452}
   - component: {fileID: 931726453}
+  - component: {fileID: 931726454}
   m_Layer: 5
   m_Name: InputFieldSurname
   m_TagString: Untagged
@@ -3551,6 +3552,19 @@ MonoBehaviour:
           m_CallState: 0
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &931726454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931726447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162016ada9a344202a12e8b721a31911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputValue: Vorname
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4790,6 +4804,7 @@ GameObject:
   - component: {fileID: 1248226418}
   - component: {fileID: 1248226421}
   - component: {fileID: 1248226422}
+  - component: {fileID: 1248226423}
   m_Layer: 5
   m_Name: InputFieldEmail
   m_TagString: Untagged
@@ -4976,6 +4991,19 @@ MonoBehaviour:
           m_CallState: 0
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1248226423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248226416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162016ada9a344202a12e8b721a31911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputValue: E-Mail
 --- !u!1 &1255832718
 GameObject:
   m_ObjectHideFlags: 0

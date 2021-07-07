@@ -6,21 +6,27 @@ using UnityEngine.EventSystems;
 using System.Runtime.InteropServices;
 using System;
 
-public class keyboardClass : MonoBehaviour, ISelectHandler {
+public class keyboardClass : MonoBehaviour, ISelectHandler
+{
+    [SerializeField]
+    string inputValue;
 
-	[DllImport("__Internal")]
-	private static extern void focusHandleAction (string _name, string _str);
+    [DllImport("__Internal")]
+    private static extern void focusHandleAction(string _name, string _str, string _inputValue);
 
-	public void ReceiveInputData(string value) {
-		gameObject.GetComponent<InputField> ().text = value;
-	}
+    public void ReceiveInputData(string value)
+    {
+        gameObject.GetComponent<InputField>().text = value;
+    }
 
-	public void OnSelect(BaseEventData data) {
-		#if UNITY_WEBGL
-		try{
-			focusHandleAction (gameObject.name, gameObject.GetComponent<InputField> ().text);
-		}
-		catch(Exception error){}
-		#endif
-	}
+    public void OnSelect(BaseEventData data)
+    {
+#if UNITY_WEBGL
+        try
+        {
+            focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text, inputValue);
+        }
+        catch (Exception error) { }
+#endif
+    }
 }

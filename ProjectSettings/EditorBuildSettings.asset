@@ -8,7 +8,10 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/MainSceneMobile.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/MainSceneDesktop.unity
     guid: ac36c06aefc18e2449799cab4096a99b
+  - enabled: 1
+    path: Assets/Scenes/MainSceneDesktopAlert.unity
+    guid: d0a6248cf268960449256220defcd923
   m_configObjects: {}
