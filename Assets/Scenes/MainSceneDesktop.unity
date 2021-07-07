@@ -783,7 +783,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 8 Punkte
+  m_Text: 0 Punkte
 --- !u!222 &88349914
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3444,6 +3444,7 @@ GameObject:
   - component: {fileID: 931726449}
   - component: {fileID: 931726452}
   - component: {fileID: 931726453}
+  - component: {fileID: 931726454}
   m_Layer: 5
   m_Name: InputFieldSurname
   m_TagString: Untagged
@@ -3628,9 +3629,21 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &931726454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931726447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162016ada9a344202a12e8b721a31911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &963194225
 GameObject:
   m_ObjectHideFlags: 0
@@ -4870,6 +4883,7 @@ GameObject:
   - component: {fileID: 1248226418}
   - component: {fileID: 1248226421}
   - component: {fileID: 1248226422}
+  - component: {fileID: 1248226423}
   m_Layer: 5
   m_Name: InputFieldEmail
   m_TagString: Untagged
@@ -5054,9 +5068,21 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
-          m_CallState: 2
+          m_CallState: 0
       m_TypeName: UnityEngine.EventSystems.EventTrigger+TriggerEvent, UnityEngine.UI,
         Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+--- !u!114 &1248226423
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248226416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162016ada9a344202a12e8b721a31911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1255832718
 GameObject:
   m_ObjectHideFlags: 0
@@ -6427,7 +6453,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a6b2293dd34cda489913df03cce7964, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  registerPoints: 10
+  registerPoints: 0
   emailGO: {fileID: 1248226416}
   nameGO: {fileID: 931726447}
   successGO: {fileID: 613793789}
@@ -7367,7 +7393,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 626.2446, y: -377.75977}
+  m_AnchoredPosition: {x: 626.24457, y: -377.75974}
   m_SizeDelta: {x: 980, y: 200}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888314035
@@ -8399,7 +8425,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 626.24414, y: -56.299805}
+  m_AnchoredPosition: {x: 626.2441, y: -56.299805}
   m_SizeDelta: {x: 0, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2452114809952516240
