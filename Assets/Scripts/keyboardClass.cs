@@ -16,11 +16,22 @@ public class keyboardClass : MonoBehaviour, ISelectHandler
 
     void Start()
     {
-        Rect rectPixel = RectTransformUtility.PixelAdjustRect(GetComponent<RectTransform>(), transform.parent.parent.parent.GetComponent<Canvas>());
-        string x = rectPixel.x.ToString() + "px";
-        string y = rectPixel.y.ToString() + "px";
+        // bottom left -> top left -> top right -> bottom right
+        Vector3[] v = new Vector3[4];
+        GetComponent<RectTransform>().GetWorldCorners(v);
+        Vector3 screenPosbl = Camera.main.WorldToScreenPoint(v[0]);
+        Vector3 screenPostl = Camera.main.WorldToScreenPoint(v[1]);
+        Vector3 screenPostr = Camera.main.WorldToScreenPoint(v[2]);
+        Vector3 screenPosbr = Camera.main.WorldToScreenPoint(v[3]);
+        /*Rect rectPixel = RectTransformUtility.PixelAdjustRect(GetComponent<RectTransform>(), transform.parent.parent.parent.GetComponent<Canvas>());
+        string x = rectPixel.left.ToString() + "px";
+        string y = rectPixel.top.ToString() + "px";
         string height = rectPixel.height.ToString() + "px";
-        string width = rectPixel.width.ToString() + "px";
+        string width = rectPixel.width.ToString() + "px";*/
+        string x = screenPostl.x.ToString() + "px";
+        string y = (Screen.height - screenPostr.y).ToString() + "px";
+        string height = (screenPostr.y - screenPosbr.y).ToString() + "px";
+        string width = (screenPostr.x - screenPostl.x).ToString() + "px";
         createRect(x, y, height, width);
     }
 
