@@ -1,3 +1,3 @@
 # Sonnenmoor-GewinnspielDB
 
-https://privatnicob-bit.github.io/Sonnenmoor-GewinnspielDB/
+https://nicob-bit.github.io/Sonnenmoor-GewinnspielDB/
