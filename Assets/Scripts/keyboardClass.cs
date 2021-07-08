@@ -12,8 +12,9 @@ public class keyboardClass : MonoBehaviour, ISelectHandler
     string inputValue;
 
     [DllImport("__Internal")]
-    private static extern void createRect(string x, string y, string height, string width);
+    private static extern void createRect(string x, string y, string height, string width, string _inputValue, string _nameGO);
 
+#if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
         // bottom left -> top left -> top right -> bottom right
@@ -23,18 +24,13 @@ public class keyboardClass : MonoBehaviour, ISelectHandler
         Vector3 screenPostl = Camera.main.WorldToScreenPoint(v[1]);
         Vector3 screenPostr = Camera.main.WorldToScreenPoint(v[2]);
         Vector3 screenPosbr = Camera.main.WorldToScreenPoint(v[3]);
-        /*Rect rectPixel = RectTransformUtility.PixelAdjustRect(GetComponent<RectTransform>(), transform.parent.parent.parent.GetComponent<Canvas>());
-        string x = rectPixel.left.ToString() + "px";
-        string y = rectPixel.top.ToString() + "px";
-        string height = rectPixel.height.ToString() + "px";
-        string width = rectPixel.width.ToString() + "px";*/
         string x = screenPostl.x.ToString() + "px";
         string y = (Screen.height - screenPostr.y).ToString() + "px";
         string height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         string width = (screenPostr.x - screenPostl.x).ToString() + "px";
-        createRect(x, y, height, width);
+        createRect(x, y, height, width, inputValue, gameObject.name);
     }
-
+#endif
     [DllImport("__Internal")]
     private static extern void focusHandleAction(string _name, string _str, string _inputValue);
 
@@ -47,11 +43,11 @@ public class keyboardClass : MonoBehaviour, ISelectHandler
     public void OnSelect(BaseEventData data)
     {
 #if UNITY_WEBGL
-        try
+        /*try
         {
             focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text, inputValue);
         }
-        catch (Exception error) { }
+        catch (Exception error) { }*/
 #endif
     }
 }

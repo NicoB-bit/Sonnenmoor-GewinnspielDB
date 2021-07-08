@@ -16,7 +16,9 @@ public class SC_LoginSystem : MonoBehaviour
     [SerializeField]
     GameObject emailGO;
     [SerializeField]
-    GameObject nameGO;
+    GameObject forenameGO;
+    [SerializeField]
+    GameObject surnameGO;
     [SerializeField]
     GameObject successGO;
 
@@ -24,7 +26,7 @@ public class SC_LoginSystem : MonoBehaviour
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
-        registerUsername = nameGO.GetComponent<InputField>().text;
+        registerUsername = forenameGO.GetComponent<InputField>().text + " " + surnameGO.GetComponent<InputField>().text;
         StartCoroutine("RegisterEnumerator");
     }
 
@@ -76,17 +78,13 @@ public class SC_LoginSystem : MonoBehaviour
 
     void Success(int errorMessage)
     {
-        if (errorMessage == 0)
+        successGO.SetActive(true);
+        if (errorMessage != 0)
         {
-            successGO.SetActive(true);
-            nameGO.transform.parent.gameObject.SetActive(false);
-        }
-        else
-        {
-            successGO.SetActive(true);
             successGO.GetComponentInChildren<Text>().text = errorMessages[errorMessage];
-            nameGO.transform.parent.gameObject.SetActive(false);
         }
+        emailGO.transform.parent.gameObject.SetActive(false);
+
     }
 
     void ResetValues()

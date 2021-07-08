@@ -7,14 +7,17 @@ using System.Text.RegularExpressions;
 public class ValidateInputs : MonoBehaviour
 {
     [SerializeField]
-    InputField nameIF;
+    InputField forenameIF;
+    [SerializeField]
+    InputField surnameIF;
     [SerializeField]
     InputField emailIF;
 
     [SerializeField]
     Button registerButton;
 
-    bool nameValid;
+    bool forenameValid;
+    bool surnameValid;
     bool emailValid;
 
     bool result;
@@ -26,21 +29,40 @@ public class ValidateInputs : MonoBehaviour
             + @"([a-zA-Z]+[\w-]+\.)+[a-zA-Z]{2,4})$";
     public const string MatchName =
            @"([a-zA-Z])";
-    public void StringChanged()
+    public void StringChanged(int identifier)
     {
-        string name = nameIF.text;
-        string email = emailIF.text;
-        if (VerifyName(name))
+        if (identifier == 2)
         {
-            nameValid = true;
+            string email = emailIF.text;
+            if (VerifyEmailAddress(email))
+            {
+                emailValid = true;
+            }
+            else emailValid = false;
         }
-        else nameValid = false;
-        if (VerifyEmailAddress(email))
+        else
         {
-            emailValid = true;
+            if (identifier == 0)
+            {
+                string forename = forenameIF.text;
+                if (VerifyName(forename))
+                {
+                    forenameValid = true;
+                }
+                else forenameValid = false;
+
+            }
+            else
+            {
+                string surname = surnameIF.text;
+                if (VerifyName(surname))
+                {
+                    surnameValid = true;
+                }
+                else surnameValid = false;
+            }
         }
-        else emailValid = false;
-        if (emailValid && nameValid)
+        if (emailValid && forenameValid && surnameValid)
         {
             registerButton.interactable = true;
         }
@@ -53,7 +75,7 @@ public class ValidateInputs : MonoBehaviour
     }
     bool VerifyName(string name)
     {
-        if (name != null && name.Length >= 4) return Regex.IsMatch(name, MatchName);
+        if (name != null && name.Length >= 3) return Regex.IsMatch(name, MatchName);
         else return false;
     }
 }

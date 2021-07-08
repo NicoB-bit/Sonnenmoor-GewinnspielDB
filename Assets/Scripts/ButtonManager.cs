@@ -51,8 +51,6 @@ public class ButtonManager : MonoBehaviour
     [SerializeField]
     Text textNumberOfCorrectA;
     [SerializeField]
-    Text textFinalScoreRegistrationScreen;
-    [SerializeField]
     TextMeshPro textPointsAchieved;
     [SerializeField]
     TextMeshPro textPointsAchievedPause;
@@ -291,7 +289,6 @@ public class ButtonManager : MonoBehaviour
         {
             finishedScreenGO.SetActive(true);
             textPointsAchieved.text = counterCorrectAnswers + "/31 Punkte";
-            textFinalScoreRegistrationScreen.text = counterCorrectAnswers + " Punkte";
             SC_LoginSystemO.registerPoints = counterCorrectAnswers.ToString();
             quizGO.SetActive(false);
         }
