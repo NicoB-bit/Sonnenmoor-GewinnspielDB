@@ -6,13 +6,10 @@ using UnityEngine.EventSystems;
 using System.Runtime.InteropServices;
 using System;
 
-public class keyboardClass : MonoBehaviour, ISelectHandler
+public class keyboardClass : MonoBehaviour
 {
-    [SerializeField]
-    string inputValue;
-
     [DllImport("__Internal")]
-    private static extern void createRect(string x, string y, string height, string width, string _inputValue, string _nameGO);
+    private static extern void createRect(string x, string y, string height, string width, string _nameGO);
 
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
@@ -28,26 +25,24 @@ public class keyboardClass : MonoBehaviour, ISelectHandler
         string y = (Screen.height - screenPostr.y).ToString() + "px";
         string height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         string width = (screenPostr.x - screenPostl.x).ToString() + "px";
-        createRect(x, y, height, width, inputValue, gameObject.name);
+        createRect(x, y, height, width, gameObject.name);
     }
 #endif
-    [DllImport("__Internal")]
-    private static extern void focusHandleAction(string _name, string _str, string _inputValue);
-
-
     public void ReceiveInputData(string value)
     {
         gameObject.GetComponent<InputField>().text = value;
     }
 
+    /*[DllImport("__Internal")]
+    private static extern void focusHandleAction(string _name, string _str, string _inputValue);
     public void OnSelect(BaseEventData data)
     {
 #if UNITY_WEBGL
-        /*try
+        try
         {
             focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text, inputValue);
         }
-        catch (Exception error) { }*/
+        catch (Exception error) { }
 #endif
-    }
+    }*/
 }
