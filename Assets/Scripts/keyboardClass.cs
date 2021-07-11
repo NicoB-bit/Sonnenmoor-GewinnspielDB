@@ -25,6 +25,7 @@ public class KeyboardClass : MonoBehaviour
         string y = (Screen.height - screenPostr.y).ToString() + "px";
         string height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         string width = (screenPostr.x - screenPostl.x).ToString() + "px";
+        gameObject.GetComponent<InputField>().text = this.transform.name;
         createRect(x, y, height, width, this.transform.name);
     }
 #endif
