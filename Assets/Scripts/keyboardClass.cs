@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using System.Runtime.InteropServices;
 using System;
 
-public class KeyboardClass : MonoBehaviour
+public class KeyboardClass : MonoBehaviour, ISelectHandler
 {
     [DllImport("__Internal")]
     private static extern void createRect(string _name, string x, string y, string height, string width);
@@ -26,11 +26,23 @@ public class KeyboardClass : MonoBehaviour
         string height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         string width = (screenPostr.x - screenPostl.x).ToString() + "px";
         gameObject.GetComponent<InputField>().text = this.transform.name;
-        createRect(gameObject.name, x, y, height, width);
+        //createRect(gameObject.name, x, y, height, width);
     }
 #endif
     public void ReceiveInputData(string value)
     {
         gameObject.GetComponent<InputField>().text = value;
+    }
+    [DllImport("__Internal")]
+    private static extern void focusHandleAction(string _name, string _str);
+    public void OnSelect(BaseEventData data)
+    {
+#if UNITY_WEBGL
+        try
+        {
+            focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text);
+        }
+        catch (Exception error) { }
+#endif
     }
 }
