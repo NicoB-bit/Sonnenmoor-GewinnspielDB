@@ -9,7 +9,8 @@ using System;
 public class KeyboardClass : MonoBehaviour, ISelectHandler
 {
     [DllImport("__Internal")]
-    private static extern void createRect(string _name, string x, string y, string height, string width);
+    //private static extern void createRect(string _name, string x, string y, string height, string width);
+    private static extern void createRect(string _name);
 
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
@@ -26,6 +27,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
         string height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         string width = (screenPostr.x - screenPostl.x).ToString() + "px";
         //createRect(gameObject.name, x, y, height, width);
+        createRect(gameObject.name);
     }
 #endif
     public void ReceiveInputData(string value)
@@ -39,7 +41,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
 #if UNITY_WEBGL
         try
         {
-            focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text);
+            //    focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text);
         }
         catch (Exception error) { }
 #endif
