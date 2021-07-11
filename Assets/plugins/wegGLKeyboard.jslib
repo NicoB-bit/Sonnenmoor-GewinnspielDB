@@ -10,6 +10,10 @@
             div.style.position = "absolute";
             div.style.background = "red";
             div.style.opacity = "0.5";
+            div.onclick = function(){
+                div.focus();
+            }
+            document.body.appendChild(div);
             var _inputTextData = prompt("");
             if (_inputTextData == null || _inputTextData == "") {
                 //canceled text
