@@ -1,6 +1,6 @@
 ﻿mergeInto(LibraryManager.library, {
     focusHandleAction: function(_name, _str){
-        if(UnityLoader.SystemInfo.mobile == true){
+        //if(UnityLoader.SystemInfo.mobile == true){
             var _inputTextData = prompt("", Pointer_stringify(_str));
             if (_inputTextData == null || _inputTextData == "") {
                 //canceled text
@@ -8,7 +8,7 @@
                 //send data to unity
                 SendMessage(Pointer_stringify(_name), 'ReceiveInputData', _inputTextData);
             }  
-        }
+        //}
     },
     createRect: function(_name, _x, _y, _height, _width){
         var div = document.createElement("input");
