@@ -9,7 +9,7 @@ using System;
 public class KeyboardClass : MonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern void createRect(string x, string y, string height, string width, string _nameGO);
+    private static extern void createRect(string x, string y, string height, string width, string _name);
 
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()

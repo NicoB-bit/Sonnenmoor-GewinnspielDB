@@ -1,16 +1,5 @@
 ﻿mergeInto(LibraryManager.library, {
-    focusHandleAction: function(_name, _str, _inputValue){
-        if(UnityLoader.SystemInfo.mobile == true){
-            var _inputTextData = prompt(Pointer_stringify(_inputValue), Pointer_stringify(_str));
-            if (_inputTextData == null || _inputTextData == "") {
-                //canceled text
-            } else {
-                //send data to unity
-                SendMessage(Pointer_stringify(_name), 'ReceiveInputData', _inputTextData);
-            }  
-        }
-    },
-    createRect: function(x, y, height, width, _nameGO){
+    createRect: function(x, y, height, width, _name){
         var div = document.createElement("input");
         div.style.top = Pointer_stringify(y);
         div.style.left = Pointer_stringify(x);
@@ -23,8 +12,8 @@
             div.focus();
         }
         div.oninput = function(){
-            console.log(_nameGO)
-            SendMessage(_nameGO, 'ReceiveInputData', div.value);
+            console.log(_name + Pointer_stringify(_name));
+            SendMessage(_name, 'ReceiveInputData', div.value);
         }
         document.body.appendChild(div);
     },
