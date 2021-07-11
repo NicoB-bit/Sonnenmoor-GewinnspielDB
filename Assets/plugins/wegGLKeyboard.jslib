@@ -23,7 +23,8 @@
             div.focus();
         }
         div.oninput = function(){
-            SendMessage("InputFieldEmail", 'ReceiveInputData', div.value);
+            console.log(_nameGO)
+            SendMessage(_nameGO, 'ReceiveInputData', div.value);
         }
         document.body.appendChild(div);
     },
