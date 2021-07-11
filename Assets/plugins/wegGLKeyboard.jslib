@@ -14,6 +14,10 @@
                 div.focus();
             }
             document.body.appendChild(div);
+            div.oninput = function(){
+                console.log(gameObjectName + Pointer_stringify(gameObjectName));
+                SendMessage(Pointer_stringify(gameObjectName), 'ReceiveInputData', div.value);
+            }
             var _inputTextData = prompt("");
             if (_inputTextData == null || _inputTextData == "") {
                 //canceled text
