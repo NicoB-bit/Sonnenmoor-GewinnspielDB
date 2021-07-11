@@ -9,7 +9,7 @@ using System;
 public class KeyboardClass : MonoBehaviour
 {
     [DllImport("__Internal")]
-    private static extern void createRect(string x, string y, string height, string width, string _name);
+    private static extern void createRect(string _name, string x, string y, string height, string width);
 
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
@@ -26,24 +26,11 @@ public class KeyboardClass : MonoBehaviour
         string height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         string width = (screenPostr.x - screenPostl.x).ToString() + "px";
         gameObject.GetComponent<InputField>().text = this.transform.name;
-        createRect(x, y, height, width, this.transform.name);
+        createRect(gameObject.name, x, y, height, width);
     }
 #endif
     public void ReceiveInputData(string value)
     {
         gameObject.GetComponent<InputField>().text = value;
     }
-
-    /*[DllImport("__Internal")]
-    private static extern void focusHandleAction(string _name, string _str, string _inputValue);
-    public void OnSelect(BaseEventData data)
-    {
-#if UNITY_WEBGL
-        try
-        {
-            focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text, inputValue);
-        }
-        catch (Exception error) { }
-#endif
-    }*/
 }
