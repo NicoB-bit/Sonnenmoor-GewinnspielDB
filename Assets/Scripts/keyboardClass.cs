@@ -30,6 +30,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
         y = (Screen.height - screenPostr.y).ToString() + "px";
         height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         width = (screenPostr.x - screenPostl.x).ToString() + "px";
+        focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text);
     }
 #endif
     public void ReceiveInputData(string value)
@@ -43,8 +44,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
 #if UNITY_WEBGL
         try
         {
-            createRect(gameObject.name, x, y, height, width);
-            //focusHandleAction(gameObject.name, gameObject.GetComponent<InputField>().text);
+            //createRect(gameObject.name, x, y, height, width);
         }
         catch (Exception error) { }
 #endif
