@@ -18,11 +18,12 @@
         div.style.width = Pointer_stringify(width);
         div.style.position = "absolute";
         div.style.background = "red";
+        div.style.opacity = "0.5";
         div.onclick = function(){
             div.focus();
         }
-        div.onchange = function(){
-                SendMessage(Pointer_stringify(_name), 'ReceiveInputData', div.value);
+        div.oninput = function(){
+            SendMessage(Pointer_stringify("InputFieldEmail"), 'ReceiveInputData', div.value);
         }
         document.body.appendChild(div);
     },

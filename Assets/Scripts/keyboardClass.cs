@@ -6,7 +6,7 @@ using UnityEngine.EventSystems;
 using System.Runtime.InteropServices;
 using System;
 
-public class keyboardClass : MonoBehaviour
+public class KeyboardClass : MonoBehaviour
 {
     [DllImport("__Internal")]
     private static extern void createRect(string x, string y, string height, string width, string _nameGO);
