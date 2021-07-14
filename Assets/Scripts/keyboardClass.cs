@@ -11,7 +11,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
     [DllImport("__Internal")]
     private static extern void createRect(string _name, string _x, string _y, string _height, string _width);
     [DllImport("__Internal")]
-    private static extern void focusHandleAction(string _identifier, string _x, string _y, string _height, string _width);
+    private static extern void focusHandleAction(string _name, string _x, string _y, string _height, string _width);
 
     string x;
     string y;
