@@ -11,14 +11,21 @@ public class ReceiveInputWebGL : MonoBehaviour
     GameObject surnameGO;
     [SerializeField]
     GameObject emailGO;
+
+    void Start()
+    {
+#if UNITY_WEBGL && !UNITY_EDITOR
+        WebGLInput.captureAllKeyboardInput = false;
+#endif
+    }
     public void ReceiveInputDataWebGL(string value)
     {
         emailGO.GetComponent<InputField>().text = value;
-        if (value.StartsWith("1"))
+        if (value.StartsWith("0"))
         {
             forenameGO.GetComponent<InputField>().text = value;
         }
-        else if (value.StartsWith("2"))
+        else if (value.StartsWith("1"))
         {
             surnameGO.GetComponent<InputField>().text = value;
         }
