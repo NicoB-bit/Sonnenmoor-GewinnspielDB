@@ -1,7 +1,6 @@
 ﻿mergeInto(LibraryManager.library, {
     focusHandleAction: function(_name, _x, _y, _height, _width){
         //if(UnityLoader.SystemInfo.mobile == true){
-            var gameObjectName = _name;
             var div = document.createElement("input");
             div.style.top = Pointer_stringify(_y);
             div.style.left = Pointer_stringify(_x);
@@ -16,7 +15,8 @@
             document.body.appendChild(div);
             div.oninput = function(){
                 console.log(gameObjectName + Pointer_stringify(gameObjectName));
-                SendMessage(Pointer_stringify(gameObjectName), 'ReceiveInputData', div.value);
+                //SendMessage(Pointer_stringify(_name), 'ReceiveInputData', div.value);
+                SendMessage(Pointer_stringify(_name), 'ReceiveInputData', "Nico");
             }
             var _inputTextData = prompt("");
             if (_inputTextData == null || _inputTextData == "") {
