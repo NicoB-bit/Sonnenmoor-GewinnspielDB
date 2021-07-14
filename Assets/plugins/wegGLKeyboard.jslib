@@ -16,7 +16,7 @@
             div.oninput = function(){
                 console.log(_identifier + Pointer_stringify(_identifier));
                 //SendMessage(Pointer_stringify(_name), 'ReceiveInputData', div.value);
-                SendMessage('Manager', 'ReceiveInputDataWebGL', _identifier + div.value);
+                SendMessage('Manager', 'ReceiveInputDataWebGL', Pointer_stringify(_identifier) + div.value);
             }
         //}
     },
