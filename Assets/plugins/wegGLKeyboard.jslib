@@ -1,5 +1,5 @@
 ﻿mergeInto(LibraryManager.library, {
-    focusHandleAction: function(_name, _x, _y, _height, _width){
+    focusHandleAction: function(_identifier, _x, _y, _height, _width){
         //if(UnityLoader.SystemInfo.mobile == true){
             var div = document.createElement("input");
             div.style.top = Pointer_stringify(_y);
@@ -14,17 +14,10 @@
             }
             document.body.appendChild(div);
             div.oninput = function(){
-                console.log(_name + Pointer_stringify(_name));
+                console.log(_identifier + Pointer_stringify(_identifier));
                 //SendMessage(Pointer_stringify(_name), 'ReceiveInputData', div.value);
-                SendMessage(Pointer_stringify(_name), 'ReceiveInputData', "Nico");
+                SendMessage('Manager', 'ReceiveInputDataWebGL', _identifier + div.value);
             }
-            var _inputTextData = prompt("");
-            if (_inputTextData == null || _inputTextData == "") {
-                //canceled text
-            } else {
-                //send data to unity
-                SendMessage(Pointer_stringify(_name), 'ReceiveInputData', _inputTextData);
-            }  
         //}
     },
     createRect: function(_name, _x, _y, _height, _width){

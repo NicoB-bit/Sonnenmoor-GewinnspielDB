@@ -11,12 +11,15 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
     [DllImport("__Internal")]
     private static extern void createRect(string _name, string _x, string _y, string _height, string _width);
     [DllImport("__Internal")]
-    private static extern void focusHandleAction(string _name, string _x, string _y, string _height, string _width);
+    private static extern void focusHandleAction(string _identifier, string _x, string _y, string _height, string _width);
 
     string x;
     string y;
     string height;
     string width;
+
+    [SerializeField]
+    string ident;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
@@ -32,7 +35,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
         y = (Screen.height - screenPostr.y).ToString() + "px";
         height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         width = (screenPostr.x - screenPostl.x).ToString() + "px";
-        focusHandleAction(gameObject.name, x, y, height, width);
+        focusHandleAction(ident, x, y, height, width);
     }
 #endif
     public void ReceiveInputData(string value)
