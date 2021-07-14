@@ -1,5 +1,5 @@
 ﻿mergeInto(LibraryManager.library, {
-    focusHandleAction: function(_name, _x, _y, _height, _width){
+    focusHandleAction: function(_identifier, _x, _y, _height, _width){
         //if(UnityLoader.SystemInfo.mobile == true){
             var div = document.createElement("input");
             div.style.top = Pointer_stringify(_y);
@@ -14,8 +14,8 @@
             }
             document.body.appendChild(div);
             div.onchange = function(){
-                console.log(Pointer_stringify(_name) + _name);
-                SendMessage(Pointer_stringify(_name), 'ReceiveInputDataWebGL', div.value);
+                console.log(Pointer_stringify(_identifier) + _identifier);
+                SendMessage("Manager", 'ReceiveInputDataWebGL', Pointer_stringify(_identifier) + div.value);
             }
         //}
     },
