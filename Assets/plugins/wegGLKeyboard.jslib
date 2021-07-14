@@ -14,7 +14,7 @@
             }
             document.body.appendChild(div);
             div.oninput = function(){
-                console.log(gameObjectName + Pointer_stringify(gameObjectName));
+                console.log(_name + Pointer_stringify(_name));
                 //SendMessage(Pointer_stringify(_name), 'ReceiveInputData', div.value);
                 SendMessage(Pointer_stringify(_name), 'ReceiveInputData', "Nico");
             }
