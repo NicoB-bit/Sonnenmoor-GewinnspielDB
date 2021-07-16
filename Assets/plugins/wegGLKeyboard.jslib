@@ -1,7 +1,8 @@
 ﻿mergeInto(LibraryManager.library, {
     focusHandleAction: function(_name, _x, _y, _height, _width){
-            console.log(Pointer_stringify(_name) + ' ' + _name + ' ' + Pointer_stringify(_y) + ' ' + _y);
         //if(UnityLoader.SystemInfo.mobile == true){
+            var name = Pointer_stringify(_name);
+            console.log(name);
             var div = document.createElement("input");
             div.style.top = Pointer_stringify(_y);
             div.style.left = Pointer_stringify(_x);
@@ -14,9 +15,10 @@
                 div.focus();
             }
             document.body.appendChild(div);
-            div.onchange = function(){
-                console.log(Pointer_stringify(_name) + _name);
-                SendMessage(Pointer_stringify(_name), 'ReceiveInputDataWebGL', div.value);
+            div.oninput = function(){
+                var message = name + div.value;
+                console.log(Pointer_stringify(_name) + name + message);
+                SendMessage("Manager", 'ReceiveInputDataWebGL', message);
             }
         //}
     },
