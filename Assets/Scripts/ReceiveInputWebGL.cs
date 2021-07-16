@@ -23,14 +23,31 @@ public class ReceiveInputWebGL : MonoBehaviour
         if (value.StartsWith("0"))
         {
             forenameGO.GetComponent<InputField>().text = value.Substring(1);
+            SetCaretPosition(forenameGO.GetComponent<InputField>());
         }
         else if (value.StartsWith("1"))
         {
             surnameGO.GetComponent<InputField>().text = value.Substring(1);
+            SetCaretPosition(surnameGO.GetComponent<InputField>());
         }
         else
         {
             emailGO.GetComponent<InputField>().text = value.Substring(1);
+            SetCaretPosition(emailGO.GetComponent<InputField>());
+        }
+    }
+    void SetCaretPosition(InputField ifO)
+    {
+        int caretIndex = ifO.text.Length;
+        StartCoroutine(SetPosition());
+        IEnumerator SetPosition()
+
+        {
+            int width = ifO.caretWidth;
+            ifO.caretWidth = 0;
+            yield return new WaitForEndOfFrame();
+            ifO.caretWidth = width;
+            ifO.caretPosition = caretIndex;
         }
     }
 }
