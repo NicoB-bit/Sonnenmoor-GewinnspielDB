@@ -32,8 +32,9 @@
         //}
     },
     DestroyDivs: function(){
-        var elems = document.getElementsByClassName('InputFields');
+        var elems = document.getElementsByClassName('InputFields'), i;
         for (i in elems) {
+            console.log(i);
             document.body.removeChild(i);
         }
     },
