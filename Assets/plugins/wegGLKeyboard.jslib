@@ -20,8 +20,13 @@
             document.body.appendChild(div);
             div.oninput = function(){
                 var message = name + div.value;
-                console.log(Pointer_stringify(_name) + name + message);
                 SendMessage("Manager", 'ReceiveInputDataWebGL', message);
+            }
+            div.onfocusin = function(){
+                SendMessage("Manager", 'ReceiveInputDataWebGL', "3" + name);
+            }
+            div.onfocusout = function(){
+                SendMessage("Manager", 'ReceiveInputDataWebGL', "4" + name);
             }
         //}
     },
