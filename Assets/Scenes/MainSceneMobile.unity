@@ -5532,6 +5532,10 @@ MonoBehaviour:
   forenameGO: {fileID: 5908038749127579879}
   surnameGO: {fileID: 5908038748976173582}
   emailGO: {fileID: 5908038749598609656}
+  goArray:
+  - {fileID: 5908038749127579879}
+  - {fileID: 5908038748976173582}
+  - {fileID: 5908038749598609656}
 --- !u!1 &1694411926
 GameObject:
   m_ObjectHideFlags: 0
@@ -7490,7 +7494,7 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 8a86b4cb7a54a436da279214ac99da74, type: 3}
     m_FontSize: 63
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 180
     m_Alignment: 3
@@ -7634,11 +7638,11 @@ MonoBehaviour:
     m_Font: {fileID: 12800000, guid: 8a86b4cb7a54a436da279214ac99da74, type: 3}
     m_FontSize: 63
     m_FontStyle: 2
-    m_BestFit: 1
+    m_BestFit: 0
     m_MinSize: 3
     m_MaxSize: 180
     m_Alignment: 3
-    m_AlignByGeometry: 1
+    m_AlignByGeometry: 0
     m_RichText: 0
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 0

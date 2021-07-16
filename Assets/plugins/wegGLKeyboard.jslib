@@ -18,21 +18,24 @@
                 div.value = "";
                 SendMessage("Manager", 'ReceiveInputDataWebGL', name + " ");
             }
-            document.body.appendChild(div);
             div.oninput = function(){
                 var message = name + div.value;
                 SendMessage("Manager", 'ReceiveInputDataWebGL', message);
             }
             div.onfocusin = function(){
+                console.log("inFocus");
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "3" + name);
             }
             div.onfocusout = function(){
+                console.log("outOfFocus");
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "4" + name);
             }
+            document.body.appendChild(div);
         //}
     },
     DestroyDivs: function(){
         var elems = document.getElementsByClassName('InputFields'), i;
+        console.log(elems);
         for (i in elems) {
             console.log(i);
             document.body.removeChild(i);

@@ -12,13 +12,11 @@ public class ReceiveInputWebGL : MonoBehaviour
     [SerializeField]
     GameObject emailGO;
 
+    [SerializeField]
     GameObject[] goArray = new GameObject[3];
 
     void Start()
     {
-        goArray[0] = forenameGO;
-        goArray[1] = surnameGO;
-        goArray[2] = emailGO;
 #if UNITY_WEBGL && !UNITY_EDITOR
         WebGLInput.captureAllKeyboardInput = false;
 #endif
