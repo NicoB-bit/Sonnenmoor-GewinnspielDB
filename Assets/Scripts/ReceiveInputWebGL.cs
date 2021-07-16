@@ -29,11 +29,11 @@ public class ReceiveInputWebGL : MonoBehaviour
         {
             if (value.StartsWith("3"))
             {
-                goArray[int.Parse(value.Substring(1))].GetComponent<InputFieldSmallText>().OnSelect(null);
+                goArray[int.Parse(value.Substring(1))].GetComponent<InputFieldSmallText>().Select();
             }
             else
             {
-                goArray[int.Parse(value.Substring(1))].GetComponent<InputFieldSmallText>().OnDeselect(null);
+                goArray[int.Parse(value.Substring(1))].GetComponent<InputFieldSmallText>().Deselect();
             }
         }
         else

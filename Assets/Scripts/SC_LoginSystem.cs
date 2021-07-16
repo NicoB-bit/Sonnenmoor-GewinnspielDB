@@ -2,6 +2,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.Networking;
+using System.Runtime.InteropServices;
 
 public class SC_LoginSystem : MonoBehaviour
 {
@@ -23,11 +24,16 @@ public class SC_LoginSystem : MonoBehaviour
     GameObject successGO;
 
     string[] errorMessages = new string[3] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!" };
+
+    [DllImport("__Internal")]
+    private static extern void DestroyDivs();
+
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
         registerUsername = forenameGO.GetComponent<InputField>().text + " " + surnameGO.GetComponent<InputField>().text;
         StartCoroutine("RegisterEnumerator");
+        DestroyDivs();
     }
 
     IEnumerator RegisterEnumerator()

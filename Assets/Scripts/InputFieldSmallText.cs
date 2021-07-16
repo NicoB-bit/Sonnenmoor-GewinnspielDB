@@ -13,6 +13,17 @@ public class InputFieldSmallText : MonoBehaviour, ISelectHandler, IDeselectHandl
         smallTextGO = transform.Find("TextSmall").gameObject;
         placeholderTextGO = transform.Find("Placeholder").gameObject;
     }
+    public void Deselect()
+    {
+        if (placeholderTextGO.GetComponent<Text>().enabled)
+        {
+            smallTextGO.SetActive(false);
+        }
+    }
+    public void Select()
+    {
+        smallTextGO.SetActive(true);
+    }
     public void OnDeselect(BaseEventData eventData)
     {
         if (placeholderTextGO.GetComponent<Text>().enabled)
