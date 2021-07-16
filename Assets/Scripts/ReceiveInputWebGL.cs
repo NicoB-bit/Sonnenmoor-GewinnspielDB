@@ -20,18 +20,17 @@ public class ReceiveInputWebGL : MonoBehaviour
     }
     public void ReceiveInputDataWebGL(string value)
     {
-        emailGO.GetComponent<InputField>().text = value;
         if (value.StartsWith("0"))
         {
-            forenameGO.GetComponent<InputField>().text = value;
+            forenameGO.GetComponent<InputField>().text = value.Substring(1);
         }
         else if (value.StartsWith("1"))
         {
-            surnameGO.GetComponent<InputField>().text = value;
+            surnameGO.GetComponent<InputField>().text = value.Substring(1);
         }
         else
         {
-            emailGO.GetComponent<InputField>().text = value;
+            emailGO.GetComponent<InputField>().text = value.Substring(1);
         }
     }
 }

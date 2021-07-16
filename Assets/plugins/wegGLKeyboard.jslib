@@ -11,8 +11,11 @@
             div.style.position = "absolute";
             div.style.background = "red";
             div.style.opacity = "0.5";
+            div.style.color = "rgba(0, 0, 0, 0)";
             div.onclick = function(){
                 div.focus();
+                div.value = "";
+                SendMessage("Manager", 'ReceiveInputDataWebGL', "");
             }
             document.body.appendChild(div);
             div.oninput = function(){
