@@ -15,7 +15,7 @@
             div.onclick = function(){
                 div.focus();
                 div.value = "";
-                SendMessage("Manager", 'ReceiveInputDataWebGL', "");
+                SendMessage("Manager", 'ReceiveInputDataWebGL', name + " ");
             }
             document.body.appendChild(div);
             div.oninput = function(){
