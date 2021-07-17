@@ -35,10 +35,8 @@
     },
     DestroyDivs: function(){
         var elems = document.getElementsByClassName('InputFields'), i;
-        console.log(elems);
-        for (i in elems) {
-            console.log(i);
-            document.body.removeChild(i);
+        for (var i = 0; i < elems.length; i++) {
+            document.body.removeChild(elems[i]);
         }
     },
 });
