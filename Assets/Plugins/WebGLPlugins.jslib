@@ -10,7 +10,7 @@
             div.style.width = Pointer_stringify(_width);
             div.style.position = "absolute";
             div.style.background = "red";
-            div.style.opacity = "0.5";
+            div.style.opacity = "0";
             div.style.color = "rgba(0, 0, 0, 0)";
             div.id = name + "InputFields";
             div.onclick = function(){

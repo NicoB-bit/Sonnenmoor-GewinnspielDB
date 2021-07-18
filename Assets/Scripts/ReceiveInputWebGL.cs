@@ -23,11 +23,7 @@ public class ReceiveInputWebGL : MonoBehaviour
     {
         if(IsMobile())
         {
-            WebGLInput.captureAllKeyboardInput = false;
-        }
-        else
-        {
-            WebGLInput.captureAllKeyboardInput = false;
+            //WebGLInput.captureAllKeyboardInput = false;
         }
     }
 #endif
