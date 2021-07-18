@@ -29,9 +29,6 @@
                 console.log("outOfFocus");
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "4" + name);
             }
-            div.callDestroy = function(){
-                document.body.removeChild(div);
-            }
             document.body.appendChild(div);
         //}
     },
@@ -39,7 +36,7 @@
         var elems = document.getElementsByClassName('InputFields');
         for (var i = 0; i < elems.length; i++) {
             console.log(removeChild(elems[i]));
-            elems[i].callDestroy();
+             elems.removeChild(elems.childNodes[i]);           
             //document.body.removeChild(elems[i]);
         }
     },
