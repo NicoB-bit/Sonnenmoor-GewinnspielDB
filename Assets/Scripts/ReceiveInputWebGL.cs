@@ -15,12 +15,23 @@ public class ReceiveInputWebGL : MonoBehaviour
     [SerializeField]
     GameObject[] goArray = new GameObject[3];
 
+    [System.Runtime.InteropServices.DllImport("__Internal")]
+    static extern bool IsMobile();
+
+#if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        WebGLInput.captureAllKeyboardInput = false;
-#endif
+        if(IsMobile())
+        {
+            WebGLInput.captureAllKeyboardInput = false;
+        }
+        else
+        {
+            WebGLInput.captureAllKeyboardInput = false;
+        }
     }
+#endif
+
     public void ReceiveInputDataWebGL(string value)
     {
         if (value.StartsWith("3") || value.StartsWith("4"))
