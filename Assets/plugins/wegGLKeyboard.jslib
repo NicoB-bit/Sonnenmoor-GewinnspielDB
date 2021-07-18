@@ -2,7 +2,6 @@
     focusHandleAction: function(_name, _x, _y, _height, _width){
         //if(UnityLoader.SystemInfo.mobile == true){
             var name = Pointer_stringify(_name);
-            console.log(name);
             var div = document.createElement("input");
             div.style.top = Pointer_stringify(_y);
             div.style.left = Pointer_stringify(_x);
@@ -30,14 +29,18 @@
                 console.log("outOfFocus");
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "4" + name);
             }
+            div.callDestroy = function(){
+                document.body.removeChild(div);
+            }
             document.body.appendChild(div);
         //}
     },
     DestroyDivs: function(){
         var elems = document.getElementsByClassName('InputFields');
-        for (var i = 0; i < elems.length - 1; i++) {
+        for (var i = 0; i < elems.length; i++) {
             console.log(removeChild(elems[i]));
-            document.body.removeChild(elems[i]);
+            elems[i].callDestroy();
+            //document.body.removeChild(elems[i]);
         }
     },
 });
