@@ -11,21 +11,18 @@
             div.style.background = "red";
             div.style.opacity = "0.5";
             div.style.color = "rgba(0, 0, 0, 0)";
-            div.className = "InputFields";
+            div.id = name + "InputFields";
             div.onclick = function(){
                 div.focus();
                 div.value = "";
                 SendMessage("Manager", 'ReceiveInputDataWebGL', name + " ");
+                SendMessage("Manager", 'ReceiveInputDataWebGL', "3" + name);
             }
             div.oninput = function(){
                 var message = name + div.value;
                 SendMessage("Manager", 'ReceiveInputDataWebGL', message);
             }
-            div.onfocusin = function(){
-                console.log("inFocus");
-                SendMessage("Manager", 'ReceiveInputDataWebGL', "3" + name);
-            }
-            div.onfocusout = function(){
+            div.onblur = function(){
                 console.log("outOfFocus");
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "4" + name);
             }
@@ -33,14 +30,12 @@
         //}
     },
     DestroyDivs: function(){
-        var elems = document.getElementsByClassName('InputFields');
-        console.log(elems);
-        elems[0].remove();
-        elems[1].remove();
-        elems[2].remove();
-        //for (var i = 0; i < elems.length; i++) {
-        //    console.log(elems[i] + i + elems.length)
-        //    elems[i].remove();           
-        //}
+        var elem1 = document.getElementById('0InputFields');
+        var elem2 = document.getElementById('1InputFields');
+        var elem3 = document.getElementById('2InputFields');
+        console.log(elem1 + elem2 + elem3);
+        elem1.remove();
+        elem2.remove();
+        elem3.remove();
     },
 });
