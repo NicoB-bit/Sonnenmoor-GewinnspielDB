@@ -12,35 +12,36 @@ public class ButtonManager : MonoBehaviour
     string[] correctAnswers = new string[16] { "013", "3", "2", "013", "2", "0", "0", "2", "13", "0123", "1", "12", "12", "023", "2", "0123" };
     int[] answersPressed = new int[4] { 0, 0, 0, 0 };
     string[] questions = new string[16] { "Welche Bestandteile findet man im Moor?",
-                                            "Wieviele wertvolle Kräutersubstanzen enthält hochwertiges Moor?",
+                                            "Wieviele verschiedene Heilkräuter und Pflanzen sind in einem hochwertigen Moor?",
                                             "Was sind Huminsäuren, die auch entzündungshemmend wirken?",
                                             "Welche besonderen Eigenschaften haben Huminsäuren?",
                                             "Wie alt ist Europas hochwertigstes Moor in Salzburg/Leopoldskron?",
-                                            "Ist Moor vegan?", "Kann man Moor trinken?",
-                                            "Wie wird hochwertiges Moor noch genannt?",
+                                            "Ist Moor vegan?",
+                                            "Kann man Moor trinken?",
+                                            "Wo befindet sich das hochwertigste Moor in Europa?",
                                             "Auf welche Körperteile wirkt Moor besonders wohltuend?",
                                             "Welche Arten von Moor-Anwendungen gibt es?",
                                             "Kleine Kräuterkunde: Welche Pflanze sehen Sie hier?",
                                             "Welche besonderen Eigenschaften hat Blutwurz?",
                                             "Wie  wird  die  wilde  Malve im Volksmund noch genannt?",
-                                            "Welche dieser Kräuter stärken das Immunsystem und wirken antiviral?",
+                                            "Welche dieser Kräuter wirken antiviral?",
                                             "Wozu verwendet man Lärchenpechsalbe?",
                                             "Welche Kräuter wirken besonders für Mund, Rachen, Hals?" };
-    string[,] answers = new string[,] { { "Calcium, Magnesium", "Eisen, Zink", "Silber, Amalgam", "Harze, Aminosäuren" },
+    string[,] answers = new string[,] { { "Calcium, Magnesium", "Eisen, Zink", "Silber, Amalgam", "Huminsäuren" },
                                         { "7", "20", "100", "Über 350" },
-                                        { "Art von menschlicher Magensäure.", "Bestandteil von Kräutern zur Abwehr schädlicher Organismen.", "Bestandteil von Moor zur Bindung von toxischen Substanzen.", "Ein Milchsäurebakterium." },
-                                        { "Große Oberfläche", "Binden Giftstoffe ähnlich wie Aktivkohle", "Besonders kleine Oberfläche", "Sehr viele freie Bindungsflächen, also OH-Gruppen" },
+                                        { "Art von menschlicher Magensäure.", "Bestandteil von Kräutern zur Abwehr schädlicher Organismen.", "Natürlicher Bestandteil von Moor; bindet toxische Substanzen.", "Ein Milchsäurebakterium." },
+                                        { "Nicht künstlich herstellbar", "Binden Giftstoffe ähnlich wie Zeolith und Heilerde", "Besonders kleine Oberfläche", "Sehr viele freie Bindungsflächen, also offene OH-Gruppen" },
                                         { "200 Jahre", "1000 Jahre", "8000-10000 Jahre", "1 Million Jahre" },
                                         { "Ja", "Nein", "", "" },
                                         { "Ja", "Nein", "", "" },
-                                        { "Weißes Silber", "Braunes Wasser", "Schwarzes Gold", "" },
+                                        { "Rom", "Bodensee", "Salzburg/Leopoldskron", "" },
                                         { "Herz", "Magen", "Prostata", "Darm" },
                                         { "Moorpackungen", "Moorkissen", "Moor zum Baden", "Trinkmoor" },
                                         { "Gundelrebe", "Blutwurz", "Goldrute", "Zinnkraut" },
-                                        { "Wirkt Blutungsstillend", "Wirkt in einem Kräuterauszug zur Stärkung der Schleimhäute", "Hoher Anteil an entzündungshemmenden Gerb-und Bitterstoffen.", "Wirkt aufgrund seiner hohen antioxidativen Wirkung stark abführend." },
+                                        { "Wirkt Blutungsstillend", "Wirkt in einem Kräuterauszug zur Stärkung der Schleimhäute", "Enthält entzündungshemmende Gerb- und Bitterstoffe.", "Wirkt abführend." },
                                         { "Frauenschuh", "Große Käsepappel", "Rosspappel", "Frauenmantel" },
-                                        { "Thymian", "Sauerkraut", "Blutwurz", "Sonnenhut" },
-                                        { "Zur Reduktion von Falten an den Augen.", "Zur Behandlung von Wunden.", "Zur Pflege von Muskeln und Nerven im Gesicht, Hals, Rücken.", "Zur Vorbeugung von Sonnenbrand." },
+                                        { "Thymian", "Sauerkraut", "Blutwurz", "Süßholzwurzel" },
+                                        { "Zur Reduktion von Augenfalten.", "Zur Behandlung von Wunden.", "Zur Pflege bei neurologischen Beschwerden im Gesicht und Körper.", "Zur Vorbeugung von Sonnenbrand." },
                                         { "Blutwurz", "Süßholzwurzel", "Kamille", "Käsepappel" } };
     string[] numberCorrectAS = new string[4] { "(1 Antwort ist richtig)", "(2 Antworten sind richtig)", "(3 Antworten sind richtig)", "(Mehrere Antworten sind richtig)" };
 
@@ -279,7 +280,7 @@ public class ButtonManager : MonoBehaviour
         else if (counterQuestionsAnswered == 10 && !secondStage)
         {
             pauseScreenGO.SetActive(true);
-            textPointsAchievedPause.text = counterCorrectAnswers + "/17 Punkte";
+            textPointsAchievedPause.text = counterCorrectAnswers + "/18 Punkte";
             ResetValues();
             LoadNewQuestion();
             quizGO.SetActive(false);

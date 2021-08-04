@@ -583,11 +583,11 @@ RectTransform:
   m_Children:
   - {fileID: 2113866348}
   m_Father: {fileID: 316679695}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 93}
+  m_AnchoredPosition: {x: 0, y: -42}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &73959055
@@ -610,8 +610,8 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Damit k\xF6nnen Sie wertvolle Naturprodukte von Sonnenmoor im Wert von
-    <b><size=130%>\u20AC150,\u2013</b><size=100%> gewinnen."
+  m_text: "Damit k\xF6nnen Sie wertvolle Naturprodukte von Sonnenmoor im Wert bis
+    zu <b><size=110%>\u20AC150,\u2013</b><size=100%> gewinnen."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bfab7e6ed064e4be3b267ef4c18ac85c, type: 2}
   m_sharedMaterial: {fileID: 2604334578169939874, guid: bfab7e6ed064e4be3b267ef4c18ac85c,
@@ -647,10 +647,10 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
-  m_characterSpacing: 1
+  m_textAlignment: 258
+  m_characterSpacing: -0.94
   m_wordSpacing: 0
-  m_lineSpacing: 14.98
+  m_lineSpacing: 3
   m_lineSpacingMax: 0
   m_paragraphSpacing: 0
   m_charWidthMaxAdj: 0
@@ -678,13 +678,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -311.6522, y: 0, z: -384.35867, w: -186.2224}
+  m_margin: {x: -311.6522, y: 0, z: -305.0759, w: -186.2224}
   m_textInfo:
     textComponent: {fileID: 73959055}
-    characterCount: 84
+    characterCount: 87
     spriteCount: 0
-    spaceCount: 11
-    wordCount: 12
+    spaceCount: 12
+    wordCount: 13
     linkCount: 0
     lineCount: 3
     pageCount: 1
@@ -746,7 +746,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.0018, y: 251.49992}
+  m_AnchoredPosition: {x: 5.0018, y: 243}
   m_SizeDelta: {x: 834.1, y: 351.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &146833366
@@ -782,8 +782,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1.05
-  m_Text: "Moor ist eines der \xE4ltesten und nat\xFCrlichsten Heilmittel f\xFCr die
-    Gesundheit von Mensch und Tier."
+  m_Text: "Moor ist eines der \xE4ltesten und nat\xFCrlichsten Heilmittel f\xFCr Mensch
+    und Tier."
 --- !u!222 &146833367
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -937,12 +937,12 @@ RectTransform:
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 789442711}
-  - {fileID: 1240290030}
   - {fileID: 525924410}
+  - {fileID: 1240290030}
   - {fileID: 1925763831}
-  - {fileID: 2092608055}
   - {fileID: 73959054}
   - {fileID: 653759764}
+  - {fileID: 2092608055}
   m_Father: {fileID: 548156666}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -968,7 +968,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &343378955
 RectTransform:
   m_ObjectHideFlags: 0
@@ -982,11 +982,11 @@ RectTransform:
   m_Children:
   - {fileID: 1359657397}
   m_Father: {fileID: 1923065367}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 59}
+  m_AnchoredPosition: {x: 0, y: 33}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &343378956
@@ -1449,13 +1449,15 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1804917616}
+  - {fileID: 866117417}
   m_Father: {fileID: 316679695}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 460}
+  m_AnchoredPosition: {x: 0, y: 439}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &525924411
@@ -1478,7 +1480,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 'SO GROSS IST IHR MOORSCHATZ:'
+  m_text: "So gross ist Ihr Moor- und Kr\xE4utrwissensschatz:"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bfab7e6ed064e4be3b267ef4c18ac85c, type: 2}
   m_sharedMaterial: {fileID: 2604334578169939874, guid: bfab7e6ed064e4be3b267ef4c18ac85c,
@@ -1513,9 +1515,9 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 17
   m_textAlignment: 258
-  m_characterSpacing: -2
+  m_characterSpacing: 0.9
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1524,7 +1526,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: -1
+  m_firstOverflowCharacterIndex: 27
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -1545,25 +1547,25 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -400.47543, y: 0, z: -391.99985, w: -10.594561}
+  m_margin: {x: -313.05548, y: 0, z: -308.1614, w: -10.594561}
   m_textInfo:
     textComponent: {fileID: 525924411}
-    characterCount: 28
+    characterCount: 47
     spriteCount: 0
-    spaceCount: 4
-    wordCount: 5
+    spaceCount: 6
+    wordCount: 7
     linkCount: 0
-    lineCount: 1
+    lineCount: 2
     pageCount: 1
-    materialCount: 1
+    materialCount: 3
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_spriteAnimator: {fileID: 0}
   m_hasFontAssetChanged: 0
   m_subTextObjects:
   - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 1804917617}
+  - {fileID: 866117418}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -1931,7 +1933,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &623252431
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2353,11 +2355,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 316679695}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -334}
+  m_AnchoredPosition: {x: 0, y: -408}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &653759765
@@ -2657,6 +2659,80 @@ Animation:
   m_PlayAutomatically: 0
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!1 &866117416
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 866117417}
+  - component: {fileID: 866117419}
+  - component: {fileID: 866117418}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [Bold Atlas Material + LiberationSans SDF Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &866117417
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866117416}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 525924410}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &866117418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866117416}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 866117419}
+  m_TextComponent: {fileID: 525924411}
+  m_materialReferenceIndex: 2
+--- !u!222 &866117419
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 866117416}
+  m_CullTransparentMesh: 0
 --- !u!1 &890867665
 GameObject:
   m_ObjectHideFlags: 0
@@ -3191,7 +3267,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 5.0018, y: -22.700066}
+  m_AnchoredPosition: {x: 5.0018, y: -14}
   m_SizeDelta: {x: 834.1, y: 231.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1117725170
@@ -3571,11 +3647,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 316679695}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 1.9998451, y: 377}
+  m_AnchoredPosition: {x: 1.9998451, y: 263}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1240290031
@@ -4408,11 +4484,11 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1923065367}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 450}
+  m_AnchoredPosition: {x: 0, y: 382}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1386002642
@@ -4435,7 +4511,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Sie haben die erste Etappe auf der \nSuche zum Moorschatz geschafft. "
+  m_text: 'Sie haben die erste Etappe zum Moorschatz geschafft. '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bfab7e6ed064e4be3b267ef4c18ac85c, type: 2}
   m_sharedMaterial: {fileID: 2604334578169939874, guid: bfab7e6ed064e4be3b267ef4c18ac85c,
@@ -4471,8 +4547,8 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 257
-  m_characterSpacing: -2.69
+  m_textAlignment: 258
+  m_characterSpacing: 0.9
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -4505,10 +4581,10 @@ MonoBehaviour:
   m_margin: {x: -310.00925, y: -11.127408, z: -306.81424, w: -72.328476}
   m_textInfo:
     textComponent: {fileID: 1386002642}
-    characterCount: 68
+    characterCount: 53
     spriteCount: 0
-    spaceCount: 12
-    wordCount: 11
+    spaceCount: 8
+    wordCount: 8
     linkCount: 0
     lineCount: 2
     pageCount: 1
@@ -4958,7 +5034,7 @@ RectTransform:
   m_Children:
   - {fileID: 34075345}
   m_Father: {fileID: 1923065367}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -5234,11 +5310,11 @@ RectTransform:
   m_LocalScale: {x: 1.0000774, y: 1.0000774, z: 1.0000774}
   m_Children: []
   m_Father: {fileID: 1923065367}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 2, y: 268}
+  m_AnchoredPosition: {x: 2, y: 147}
   m_SizeDelta: {x: 20, y: 5}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1639509984
@@ -5261,7 +5337,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: 17/17 Punkte
+  m_text: 18/18 Punkte
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: f8d035eca2d6046878ed6a7c4d27d29a, type: 2}
   m_sharedMaterial: {fileID: -8033106331316567661, guid: f8d035eca2d6046878ed6a7c4d27d29a,
@@ -5290,7 +5366,7 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 1378.05
+  m_fontSize: 1343.7
   m_fontSizeBase: 143
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -5681,6 +5757,80 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1804917615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1804917616}
+  - component: {fileID: 1804917618}
+  - component: {fileID: 1804917617}
+  m_Layer: 5
+  m_Name: TMP SubMeshUI [Bold Atlas Material + Bold Plus Atlas]
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1804917616
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804917615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 525924410}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1804917617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804917615}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_fontAsset: {fileID: 11400000, guid: f8d035eca2d6046878ed6a7c4d27d29a, type: 2}
+  m_spriteAsset: {fileID: 0}
+  m_material: {fileID: 0}
+  m_sharedMaterial: {fileID: 0}
+  m_isDefaultMaterial: 0
+  m_padding: 1.25
+  m_canvasRenderer: {fileID: 1804917618}
+  m_TextComponent: {fileID: 525924411}
+  m_materialReferenceIndex: 1
+--- !u!222 &1804917618
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1804917615}
+  m_CullTransparentMesh: 0
 --- !u!1 &1822369864
 GameObject:
   m_ObjectHideFlags: 0
@@ -5862,7 +6012,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1837433269
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6000,7 +6150,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -323}
+  m_AnchoredPosition: {x: 0, y: -179}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1888187225
@@ -6023,11 +6173,11 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: "Beantworten Sie noch 6 Fragen zu Heilkr\xE4utern auf der Finaletappe zum
-    MOORSCHATZ!"
+  m_text: "Nur noch 6 weitere Fragen zu Heilkr\xE4utern und Sie sind am Ziel mit wertvollen
+    Gewinnen. "
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: f8d035eca2d6046878ed6a7c4d27d29a, type: 2}
-  m_sharedMaterial: {fileID: -8033106331316567661, guid: f8d035eca2d6046878ed6a7c4d27d29a,
+  m_fontAsset: {fileID: 11400000, guid: bfab7e6ed064e4be3b267ef4c18ac85c, type: 2}
+  m_sharedMaterial: {fileID: 2604334578169939874, guid: bfab7e6ed064e4be3b267ef4c18ac85c,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
@@ -6061,7 +6211,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_textAlignment: 258
-  m_characterSpacing: -0.66
+  m_characterSpacing: 0.9
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -6070,7 +6220,7 @@ MonoBehaviour:
   m_enableWordWrapping: 1
   m_wordWrappingRatios: 0.4
   m_overflowMode: 0
-  m_firstOverflowCharacterIndex: 54
+  m_firstOverflowCharacterIndex: -1
   m_linkedTextComponent: {fileID: 0}
   m_isLinkedTextComponent: 0
   m_isTextTruncated: 0
@@ -6091,13 +6241,13 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: -310.00925, y: -11.127408, z: -306.81424, w: -72.328476}
+  m_margin: {x: -310.00925, y: -11.127408, z: -306.81424, w: -169.40123}
   m_textInfo:
     textComponent: {fileID: 1888187225}
-    characterCount: 81
+    characterCount: 88
     spriteCount: 0
-    spaceCount: 11
-    wordCount: 12
+    spaceCount: 15
+    wordCount: 15
     linkCount: 0
     lineCount: 3
     pageCount: 1
@@ -6443,10 +6593,10 @@ RectTransform:
   m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
   m_Children:
   - {fileID: 1955143540}
+  - {fileID: 1386002641}
   - {fileID: 1639509983}
   - {fileID: 1595228283}
   - {fileID: 343378955}
-  - {fileID: 1386002641}
   - {fileID: 623252431}
   - {fileID: 1888187224}
   - {fileID: 646972801}
@@ -6494,7 +6644,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -500.2}
+  m_AnchoredPosition: {x: 0, y: -567}
   m_SizeDelta: {x: 820.3, y: 174.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1925763832
@@ -7175,11 +7325,11 @@ RectTransform:
   m_Children:
   - {fileID: 2082785111}
   m_Father: {fileID: 316679695}
-  m_RootOrder: 4
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: -653}
+  m_AnchoredPosition: {x: 0, y: -717}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2092608056
@@ -7347,7 +7497,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2103050418}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 058cba836c1846c3aa1c5fd2e28aea77, type: 3}
   m_Name: 
@@ -8949,7 +9099,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5908038749639507957
 RectTransform:
   m_ObjectHideFlags: 0
