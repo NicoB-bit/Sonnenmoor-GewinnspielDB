@@ -69,11 +69,11 @@ public class SC_LoginSystem : MonoBehaviour
                 {
                     errorMessage = responseText;
                     Debug.Log(errorMessage.ToString());
-                    if (errorMessage.ToString() == "User with this name already exist.")
+                    if (errorMessage.ToString() == "User with this email already exist.")
                     {
                         Success(2);
                     }
-                    if (errorMessage.ToString().Contains("Points are empty"))
+                    else
                     {
                         Success(1);
                     }
