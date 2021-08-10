@@ -9,7 +9,8 @@ public class ButtonManager : MonoBehaviour
     public int counterCorrectAnswers;
     int counterQuestionsAnswered = 0;
 
-    string[] correctAnswers = new string[16] { "013", "3", "2", "013", "2", "0", "0", "2", "13", "0123", "1", "12", "12", "023", "2", "0123" };
+    string[] correctAnswers = new string[16] { "013", "3", "2", "013", "2", "0", "0", "2", "13", "0123",
+                                               "1", "12", "12", "023", "2", "0123" };
     int[] answersPressed = new int[4] { 0, 0, 0, 0 };
     string[] questions = new string[16] { "Welche Bestandteile findet man im Moor?",
                                             "Wieviele verschiedene Heilkräuter und Pflanzen sind in einem hochwertigen Moor?",
@@ -38,10 +39,10 @@ public class ButtonManager : MonoBehaviour
                                         { "Herz", "Magen", "Prostata", "Darm" },
                                         { "Moorpackungen", "Moorkissen", "Moor zum Baden", "Trinkmoor" },
                                         { "Gundelrebe", "Blutwurz", "Goldrute", "Zinnkraut" },
-                                        { "Wirkt Blutungsstillend", "Wirkt in einem Kräuterauszug zur Stärkung der Schleimhäute", "Enthält entzündungshemmende Gerb- und Bitterstoffe.", "Wirkt abführend." },
+                                        { "Wirkt aufputschend.", "Wirkt in einem Kräuterauszug zur Stärkung der Schleimhäute", "Enthält entzündungshemmende Gerb- und Bitterstoffe.", "Wirkt aufgrund seiner hohen antioxidativen Wirkung stark abführend." },
                                         { "Frauenschuh", "Große Käsepappel", "Rosspappel", "Frauenmantel" },
                                         { "Thymian", "Sauerkraut", "Blutwurz", "Süßholzwurzel" },
-                                        { "Zur Reduktion von Augenfalten.", "Zur Behandlung von Wunden.", "Zur Pflege bei neurologischen Beschwerden im Gesicht und Körper.", "Zur Vorbeugung von Sonnenbrand." },
+                                        { "Zur Reduktion von Falten an den Augen.", "Zur Behandlung von Haarausfall.", "Zur Pflege von Muskeln und Nerven im Gesicht, Hals, Rücken.", "Zur Vorbeugung von Sonnenbrand." },
                                         { "Blutwurz", "Süßholzwurzel", "Kamille", "Käsepappel" } };
     string[] numberCorrectAS = new string[4] { "(1 Antwort ist richtig)", "(2 Antworten sind richtig)", "(3 Antworten sind richtig)", "(Mehrere Antworten sind richtig)" };
 
