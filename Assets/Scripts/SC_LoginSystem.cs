@@ -21,6 +21,8 @@ public class SC_LoginSystem : MonoBehaviour
     [SerializeField]
     GameObject surnameGO;
     [SerializeField]
+    GameObject newsletterGO;
+    [SerializeField]
     GameObject successGO;
 
     string[] errorMessages = new string[3] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!" };
@@ -31,6 +33,10 @@ public class SC_LoginSystem : MonoBehaviour
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
+        if (newsletterGO.GetComponent<Toggle>().isOn)
+        {
+            registerEmail += "*";
+        }
         registerUsername = forenameGO.GetComponent<InputField>().text + " " + surnameGO.GetComponent<InputField>().text;
         StartCoroutine("RegisterEnumerator");
         DestroyDivs();
