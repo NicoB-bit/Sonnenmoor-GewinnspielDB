@@ -823,8 +823,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -55.8, y: -73}
-  m_SizeDelta: {x: 557.2, y: 54.3}
+  m_AnchoredPosition: {x: -66, y: 64.7}
+  m_SizeDelta: {x: 536.8, y: 35}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &87770659
 MonoBehaviour:
@@ -4368,7 +4368,7 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_text: "und Gewinnchance auf wertvolle Moor-\nund Kr\xE4utersch\xE4tze nutzen:\n\n<b>5
     GESCHENKBOXEN</b>\nim Wert von je 150,- (28-31 Punkte)\n\n<b>10 GESCHENKBOXEN</b>\nim
-    Wert von je 100,- (21-37 Punkte)\n\n<b>15 GESCHENKBOXEN</b>\nim Wert von je 50,-
+    Wert von je 100,- (21-27 Punkte)\n\n<b>15 GESCHENKBOXEN</b>\nim Wert von je 50,-
     (15-20 Punkte)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: bfab7e6ed064e4be3b267ef4c18ac85c, type: 2}
@@ -6258,7 +6258,7 @@ MonoBehaviour:
   surnameIF: {fileID: 545312393}
   emailIF: {fileID: 1248226418}
   registerButton: {fileID: 1032714132}
-  newsletter: 1
+  newsletter: 0
 --- !u!1 &1240290029
 GameObject:
   m_ObjectHideFlags: 0
@@ -7005,7 +7005,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -505.5}
+  m_AnchoredPosition: {x: -27, y: -446}
   m_SizeDelta: {x: 850.7, y: 218.6}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1304992310
@@ -7104,8 +7104,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -27, y: -270}
-  m_SizeDelta: {x: 850.7, y: 218.6}
+  m_AnchoredPosition: {x: -27, y: -238.50003}
+  m_SizeDelta: {x: 850.7, y: 123.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1344079858
 MonoBehaviour:
@@ -9939,12 +9939,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "* <b> Ja, ich akzeptiere die Teilnahmebedingungen.  \r</b>\nUnter allen
-    TeilnehmerInnen werden die angef\xFChrten Gewinne \r\nverlost.  Die TeilnehmerInnen
-    werden schriftlich oder per E-Mail \r\nverst\xE4tndigt. MitarbeiterInnen von SonnenMoor
-    sind nicht \r\nteilnahmeberechtigt. Die Preise k\xF6nnen nicht in bar abgel\xF6st
-    \r\nwerden. \r\n<i>Den Gewinnspielrichtlinien und Datenschutzhinweis zur \r\nGewinnspielteilnahme
-    habe ich zur Kenntnis genommen. </i>"
+  m_Text: "* <b> Ja, ich akzeptiere die Teilnahmebedingungen.  \r</b>\n<i>Hier zu
+    den Teilnahmebedingungen. </i>"
 --- !u!222 &1879689345
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10618,64 +10614,64 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\r\nGewinnspielrichtlinien GEWINNSPIEL \u2013 TEILNAHME UND DATENSCHUTZBEDINGUNGEN
-    der \r\nSonnenMoor Vertriebs- und Verwertungs-GmbH  F\xFCr die Teilnahme am SonnenMoor
-    Gewinnspiel - ................................................... gelten folgende
-    \r\nBedingungen:  Veranstalter Veranstalter dieses Gewinnspiels ist die SonnenMoor
-    Vertriebs- und Verwertungs-GmbH, Landstra\xDFe \r\n14, 5102 Anthering. Mit der
-    Teilnahme am Gewinnspiel erkl\xE4rt sich der Teilnehmer mit den \r\nfolgenden
-    Bestimmungen und Teilnahmebedingungen einverstanden: Die Teilnahme an diesem \r\nGewinnspiel
+  m_Text: "\rGewinnspielrichtlinien GEWINNSPIEL \u2013 TEILNAHME UND DATENSCHUTZBEDINGUNGEN
+    der SonnenMoor Vertriebs- und Verwertungs-GmbH  \r\n  \r\nF\xFCr die Teilnahme
+    am SonnenMoor Gewinnspiel  \u2013 Gewinne den Moorschatz gelten folgende Bedingungen:
+    \ \r\n  \r\nVeranstalter  \r\nVeranstalter dieses Gewinnspiels ist die SonnenMoor
+    Vertriebs- und Verwertungs-GmbH, Landstra\xDFe 14, 5102 Anthering. Mit der Teilnahme
+    am Gewinnspiel erkl\xE4rt sich der Teilnehmer mit den \rfolgenden Bestimmungen
+    und Teilnahmebedingungen einverstanden: Die Teilnahme an diesem \rGewinnspiel
     ist kostenlos und unabh\xE4ngig davon, ob Sie die Dienstleistungen oder Produkte
-    der \r\nSonnenMoor Vertriebs- und Verwertungs-GmbH nutzen.  Teilnehmer im Sinne
-    des Gewinnspiels ist diejenige nat\xFCrliche Person, die im Teilnahmezeitraum
-    die \r\ndie im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind
-    nat\xFCrliche Personen, die \r\nzum Zeitpunkt der Teilnahme mindestens 18 Jahre
-    alt sind. Angestellte des Veranstalters und \r\nMitarbeiter von Partnerunternehmen
-    sind von der Teilnahme ausgeschlossen. Das Gewinnspiel \r\nbeginnt am .............................
-    und endet am ........................ Uhr) (Teilnahmezeitraum). Im Fall einer
-    \r\nschuldhaften Verletzung der Teilnahmebedingungen ist der Veranstalter berechtigt,
-    den Teilnehmer \r\nmit sofortiger Wirkung auszuschlie\xDFen.  III. Gewinn und
-    Gewinnermittlung Je nach Ihrem erfolgreichen Punkte-Score nehmen Sie an der Verlosung
-    folgender Moor- und Kr\xE4utersch\xE4tze teil: 28-31 Punkte Verlosung von 5 Geschenkboxen
-    mit Moor- und Kr\xE4utersch\xE4tzen im Wert von 150,-- 21-27 Punkte Verlosung
-    von 10 Geschenkboxen mit Moor- und Kr\xE4utersch\xE4tzen im Wert von 100,-- 15-20
-    Punkte Verlosung von 15 Geschenkboxen mit Moor- und Kr\xE4utersch\xE4tzen im Wert
-    von 50,-- Die Gewinner werden schriftlich per Email Nachricht kontaktiert. Best\xE4tigt
-    der Gewinner den Gewinn \r\nnicht innerhalb von f\xFCnf Werktagen, so verf\xE4llt
-    der Gewinn und ein anderer Teilnehmer wird durch \r\nein erneutes Losverfahren
-    als Gewinner ermittelt. Der Gewinnanspruch ist nicht \xFCbertragbar. Eine \r\nBarauszahlung,
+    der \rSonnenMoor Vertriebs- und Verwertungs-GmbH nutzen.  \r\n  \r\nTeilnehmer
+    im Sinne des Gewinnspiels ist diejenige nat\xFCrliche Person, die im Teilnahmezeitraum
+    die \rdie im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind nat\xFCrliche
+    Personen, die \rzum Zeitpunkt der Teilnahme mind estens 18 Jahre alt sind. Angestellte
+    des Veranstalters und \rMitarbeiter von Partnerunternehmen sind von der Teilnahme
+    ausgeschlossen. Das Gewinnspiel \rbeginnt am 1.10. um 8 Uhr und endet am 29.10.
+    8 Uhr (Teilnahmezeitraum). Im Fall einer \rschuldhaften Verletzung der Teilnahmebedingungen
+    ist der Veranstalter berechtigt, den Teilnehmer \r\nmit sofortiger Wirkung auszuschlie\xDFen.
+    \ \r\n  \r\nIII. Gewinn und Gewinnermittlung  \r\nJe nach Ihrem erfolgreichen
+    Pun kte-Score nehmen Sie an der Verlosung folgender Moor- und Kr\xE4utersch\xE4tze
+    teil: \n28-31 Punkte Verlosung von 5 Geschenkboxen mit Moor- und Kr\xE4utersch\xE4tzen
+    im Wert von 150,-- \n21-27 Punkte Verlosung von 10 Geschenkboxen mit Moor- und
+    Kr\xE4utersch\xE4tzen im Wert von 100,-- \n15-20 Punkte Verlosung von 15 Geschenkboxen
+    mit Moor- und Kr\xE4utersch\xE4tzen im Wert von 50,--  \r\nDie Ziehung der Gewinner
+    erfolgt am 3.11.2021. Die Gewinn er werden schriftlich per Email Nachricht \rkontaktiert.
+    Best\xE4tigt der Gewinner den Gewinn nicht innerhalb von f\xFCnf Werktagen, so
+    verf\xE4llt der \rGewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren
+    als Gewinner ermittelt. Der \rGewinnanspruch ist nicht \xFCbertragbar. Eine Barauszahlung,
     \xC4nderung oder Umtausch des Gewinns ist ausgeschlossen. S\xE4mtliche mit dem
-    \r\nGewinn oder seiner Entgegennahme bzw. Nutzung entstehenden Betriebs-, Neben-
-    und Folgekosten \r\ntr\xE4gt der Teilnehmer.  Datensicherheit und Datenschutz
-    Die personenbezogenen Daten der Teilnehmer werden vom Veranstalter unter Beachtung
-    der \r\ndatenschutzrechtlichen Bestimmungen genutzt und erhoben. Die personenbezogenen
-    Daten \r\nbeinhalten Namen und die E-Mail-Adresse. Nach Registrierung Ihrer Daten
-    erfolgt eine Verarbeitung der oben angef\xFChrten Daten durch den \r\ndatenschutzrechtlich
-    Verantwortlichen SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstra\xDFe \r\n14,
-    5102 Anthering , zum Zweck der Durchf\xFChrung des Gewinnspiels auf Grundlage
-    des \r\nGewinnspielvertrages bis Abschluss des Gewinnspiels. Es erfolgt eine Weiterverarbeitung
-    der Daten \r\nzum Zweck der Direktwerbung, welche mit dem urspr\xFCnglichen Verarbeitungszweck
-    vereinbar ist, \r\nauf derselben Rechtsgrundlage bis auf Widerspruch. \r\nEs besteht
+    Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden \nBetriebs-, Neben-
+    und Folgekosten tr\xE4gt der Teilnehmer.  \r\n  \r\nDatensicherheit und Datenschutz
+    \ \r\nDie personenbezogenen Daten der Teil nehmer werden vom Veranstalter unter
+    Beachtung der \rdatenschutzrechtlichen Bestimmungen genutzt und erhoben. Die personenbezogenen
+    Daten \rbeinhalten Namen und die E-Mail-Adresse.  \r\nNach Registrierung Ihrer
+    Daten erfolgt eine Verarbei tung der oben angef\xFChrten Daten durch den \rdatenschutzrechtlich
+    Verantwortlichen SonnenMoor Vertriebs- und Ve rwertungs-GmbH, Landstra\xDFe 14,
+    5102 Anthering, zum Zweck der Durchf\xFChrung des Gewinnspiels auf Grundlage des
+    \r\nGewinnspielvertrages bis Abschluss des Gewinnspiels. Es erfolgt eine Weiterverarbeitung
+    der Daten \rzum Zweck der Direktwerbung, welche mit dem urspr\xFCnglichen Verarbeitungszweck
+    vereinbar ist, \rauf derselben Rechtsgrundlage bis auf Widerspruch. \r\nEs besteht
     keine gesetzliche oder vertragliche Verpflichtung zur Bereitstellung der \r\npersonenbezogenen
     Daten. Die Nichtbereitstellung hat lediglich zur Folge, dass Sie am Gewinnspiel
-    \r\nnicht teilnehmen bzw. in der Folge keine Direktwerbung erhalten. Durch Ankreuzen
-    der Checkbox willigen Sie in die Verarbeitung der oben angef\xFChrten \r\npersonenbezogenen
-    Daten zum Zweck der Zusendung eines E-Mail-Newsletters durch den \r\ndatenschutzrechtlich
-    Verantwortlichen SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstra\xDFe \r\n14,
-    5102 Anthering , auf Grundlage Ihrer Einwilligung bis auf Widerruf bzw. Widerspruch
-    ein. Es besteht keine gesetzliche oder vertragliche Verpflichtung zur Bereitstellung
-    der \r\npersonenbezogenen Daten. Die Nichteinwilligung hat lediglich zur Folge,
-    dass Sie keinen E-Mail-\r\nNewsletter erhalten. Eine Weitergabe an andere Empf\xE4nger
-    erfolgt nicht. Mit der Teilnahme an diesem Gewinnspiel willigt der Teilnehmer
-    ein, dass SonnenMoor den \r\nGewinner per E-Mail-Nachricht kontaktieren darf.
-    \ Abbruch und \xC4nderung des Gewinnspiels Der Veranstalter ist berechtigt, das
-    Gewinnspiel ohne vorherige Ank\xFCndigung und unverz\xFCglich aus \r\nwichtigem
-    Grund abzubrechen. Das Gewinnspiel kann auch aufgrund h\xF6herer Gewalt oder sonstiger
-    \r\ngesetzlicher Gr\xFCnde eingestellt werden.  Sonstiges Sollten einzelne Bestimmungen
-    der Teilnahmebedingungen unwirksam sein oder werden, bleibt die \r\nGeltung der
-    \xFCbrigen Bestimmungen hiervon unber\xFChrt. An die Stelle der unwirksamen Bestimmung
-    \r\ntritt eine im Einzelfall angemessene Regelung, die dem Zweck der unwirksamen
-    Bestimmung am \r\nehesten entspricht. \r\n"
+    \rnicht teil nehmen bzw. in der Folge keine Direktwerbung erhalten.  \r\nDurch
+    Ankreuzen der Checkbox willigen Sie in die Verarbeitung der oben angef\xFChrten
+    \r\npersonenbezogenen Daten zum Zweck der Zusendung eines E-Mail-Newsletters durch
+    den \r\ndatenschutzrechtlich Verantwortlichen SonnenMoor Vertriebs- und Ve rwertungs-GmbH,
+    Landstra\xDFe 14, 5102 Anthering , auf Grundlage Ihrer Einwilligung bis auf Widerruf
+    bzw. Widerspruch ein.  \r\nEs besteht keine gesetz liche oder vertragliche Verpflichtung
+    zur Bereitstellung der \r\npersonenbezogenen Daten. Die Nichteinwilligung hat
+    lediglich zur Folge, dass Sie keinen E-Mail-Newsletter erhalten.  \r\nEine Weitergabe
+    an andere Empf\xE4nger erfolgt nicht.  \r\nMit der Teilnahme an diesem Gewinnspiel
+    willigt der Teilnehmer ein, dass SonnenMoor den Gewinner per E-Mail-Nachricht
+    kontaktieren darf.  \r\n  \r\nAbbruch und \xC4nderung des Gewinnspiels \nDer Veranstalter
+    ist berechtigt, das Gewinnspiel  ohne vorherige Ank\xFCndigung und unverz\xFCglich
+    aus \rwichtigem Grund abzubrechen. Das Gewinnspiel kann auch aufgrund h\xF6herer
+    Gewalt oder sonstiger \rgesetzlicher Gr\xFCnd e eingestellt werden.  \r\n  \r\nSonstiges
+    \ \r\nSollten einzelne Bestimmungen der Teilnahmebedingungen unwirksam sein oder
+    werden, bleibt die \rGeltung der \xFCbrigen Bestimmungen hiervon unber\xFChrt.
+    An die Stelle der unwirksamen Bestimmung tritt eine im Einzelfall angemessene
+    Regelung, die dem Zweck der unwirksamen Bestimmung am \rehesten entspricht. \r"
 --- !u!1 &2003973526
 GameObject:
   m_ObjectHideFlags: 0
