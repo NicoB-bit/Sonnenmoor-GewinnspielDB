@@ -10259,7 +10259,7 @@ MonoBehaviour:
     die \rdie im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind nat\xFCrliche
     Personen, die \rzum Zeitpunkt der Teilnahme mind estens 18 Jahre alt sind. Angestellte
     des Veranstalters und \rMitarbeiter von Partnerunternehmen sind von der Teilnahme
-    ausgeschlossen. Das Gewinnspiel \rbeginnt am 1.11. um 8 Uhr und endet am 29.11.
+    ausgeschlossen. Das Gewinnspiel \rbeginnt am 1.11. um 8 Uhr und endet am 30.11.
     8 Uhr (Teilnahmezeitraum). Im Fall einer \rschuldhaften Verletzung der Teilnahmebedingungen
     ist der Veranstalter berechtigt, den Teilnehmer \rmit sofortiger Wirkung auszuschlie\xDFen.
     \ \r\n  \r\nIII. Gewinn und Gewinnermittlung  \r\nJe nach Ihrem erfolgreichen
@@ -10874,7 +10874,7 @@ MonoBehaviour:
   surnameIF: {fileID: 5144621952320041497}
   emailIF: {fileID: 5144621954024657122}
   registerButton: {fileID: 5144621952773344004}
-  newsletter: 0
+  newsletter: 1
 --- !u!1 &5144621954119902884
 GameObject:
   m_ObjectHideFlags: 0
