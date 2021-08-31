@@ -30,6 +30,11 @@ public class SC_LoginSystem : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void DestroyDivs();
 
+    public void DestroyDivsButton()
+    {
+        DestroyDivs();
+    }
+
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
