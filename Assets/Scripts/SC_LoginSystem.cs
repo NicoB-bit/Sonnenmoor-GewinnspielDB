@@ -39,7 +39,9 @@ public class SC_LoginSystem : MonoBehaviour
         }
         registerUsername = forenameGO.GetComponent<InputField>().text + " " + surnameGO.GetComponent<InputField>().text;
         StartCoroutine("RegisterEnumerator");
+#if UNITY_WEBGL && !UNITY_EDITOR
         DestroyDivs();
+#endif
     }
 
     IEnumerator RegisterEnumerator()
@@ -53,8 +55,9 @@ public class SC_LoginSystem : MonoBehaviour
 
         using (UnityWebRequest www = UnityWebRequest.Post(rootURL + "register.php", form))
         {
-            yield return www.SendWebRequest();
+            www.timeout = 10;
 
+            yield return www.SendWebRequest();
             if (www.isHttpError || www.isNetworkError)
             {
                 errorMessage = www.error;

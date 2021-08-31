@@ -1,0 +1,138 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &5808902983993702743
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5808902983993702740}
+  - component: {fileID: 5808902983993702741}
+  - component: {fileID: 5808902983993702762}
+  m_Layer: 5
+  m_Name: Content
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &5808902983993702740
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808902983993702743}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: -0.0007219872}
+  m_SizeDelta: {x: 0, y: 4137.7}
+  m_Pivot: {x: 0, y: 1}
+--- !u!222 &5808902983993702741
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808902983993702743}
+  m_CullTransparentMesh: 0
+--- !u!114 &5808902983993702762
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5808902983993702743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 35
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: "\rGewinnspielrichtlinien GEWINNSPIEL \u2013 TEILNAHME UND DATENSCHUTZBEDINGUNGEN
+    der SonnenMoor Vertriebs- und Verwertungs-GmbH  \r\n  \r\nF\xFCr die Teilnahme
+    am SonnenMoor Gewinnspiel  \u2013 Gewinne den Moorschatz gelten folgende Bedingungen:
+    \ \r\n  \r\nVeranstalter  \r\nVeranstalter dieses Gewinnspiels ist die SonnenMoor
+    Vertriebs- und Verwertungs-GmbH, Landstra\xDFe 14, 5102 Anthering. Mit der Teilnahme
+    am Gewinnspiel erkl\xE4rt sich der Teilnehmer mit den \rfolgenden Bestimmungen
+    und Teilnahmebedingungen einverstanden: Die Teilnahme an diesem \rGewinnspiel
+    ist kostenlos und unabh\xE4ngig davon, ob Sie die Dienstleistungen oder Produkte
+    der \rSonnenMoor Vertriebs- und Verwertungs-GmbH nutzen.  \r\n  \r\nTeilnehmer
+    im Sinne des Gewinnspiels ist diejenige nat\xFCrliche Person, die im Teilnahmezeitraum
+    die \rdie im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind nat\xFCrliche
+    Personen, die \rzum Zeitpunkt der Teilnahme mind estens 18 Jahre alt sind. Angestellte
+    des Veranstalters und \rMitarbeiter von Partnerunternehmen sind von der Teilnahme
+    ausgeschlossen. Das Gewinnspiel \rbeginnt am 1.11. um 8 Uhr und endet am 29.11.
+    8 Uhr (Teilnahmezeitraum). Im Fall einer \rschuldhaften Verletzung der Teilnahmebedingungen
+    ist der Veranstalter berechtigt, den Teilnehmer \rmit sofortiger Wirkung auszuschlie\xDFen.
+    \ \r\n  \r\nIII. Gewinn und Gewinnermittlung  \r\nJe nach Ihrem erfolgreichen
+    Punkte-Score nehmen Sie an der Verlosung folgender Moor- und Kr\xE4utersch\xE4tze
+    teil: \n28-31 Punkte Verlosung von 5 Geschenkboxen mit Moor- und Kr\xE4utersch\xE4tzen
+    im Wert von 150,-- \n21-27 Punkte Verlosung von 10 Geschenkboxen mit Moor- und
+    Kr\xE4utersch\xE4tzen im Wert von 100,-- \n15-20 Punkte Verlosung von 15 Geschenkboxen
+    mit Moor- und Kr\xE4utersch\xE4tzen im Wert von 50,--  \r\nDie Ziehung der Gewinner
+    erfolgt am 3.12.2021. Die Gewinn er werden schriftlich per Email Nachricht \rkontaktiert.
+    Best\xE4tigt der Gewinner den Gewinn nicht innerhalb von f\xFCnf Werktagen, so
+    verf\xE4llt der \rGewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren
+    als Gewinner ermittelt. Der \rGewinnanspruch ist nicht \xFCbertragbar. Eine Barauszahlung,
+    \xC4nderung oder Umtausch des Gewinns ist ausgeschlossen. S\xE4mtliche mit dem
+    Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden \nBetriebs-, Neben-
+    und Folgekosten tr\xE4gt der Teilnehmer.  \r\n  \r\nDatensicherheit und Datenschutz
+    \ \r\nDie personenbezogenen Daten der Teil nehmer werden vom Veranstalter unter
+    Beachtung der \rdatenschutzrechtlichen Bestimmungen genutzt und erhoben. Die personenbezogenen
+    Daten \rbeinhalten Namen und die E-Mail-Adresse.  \r\nNach Registrierung Ihrer
+    Daten erfolgt eine Verarbei tung der oben angef\xFChrten Daten durch den \rdatenschutzrechtlich
+    Verantwortlichen SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstra\xDFe 14,
+    5102 Anthering, zum Zweck der Durchf\xFChrung des Gewinnspiels auf Grundlage des
+    \r\nGewinnspielvertrages bis Abschluss des Gewinnspiels. Es erfolgt eine Weiterverarbeitung
+    der Daten \rzum Zweck der Direktwerbung, welche mit dem urspr\xFCnglichen Verarbeitungszweck
+    vereinbar ist, \rauf derselben Rechtsgrundlage bis auf Widerspruch. \r\nEs besteht
+    keine gesetzliche oder vertragliche Verpflichtung zur Bereitstellung der \r\npersonenbezogenen
+    Daten. Die Nichtbereitstellung hat lediglich zur Folge, dass Sie am Gewinnspiel
+    \rnicht teilnehmen bzw. in der Folge keine Direktwerbung erhalten.  \r\nDurch
+    Ankreuzen der Checkbox willigen Sie in die Verarbeitung der oben angef\xFChrten
+    \r\npersonenbezogenen Daten zum Zweck der Zusendung eines E-Mail-Newsletters durch
+    den \r\ndatenschutzrechtlich Verantwortlichen SonnenMoor Vertriebs- und Ve rwertungs-GmbH,
+    Landstra\xDFe 14, 5102 Anthering , auf Grundlage Ihrer Einwilligung bis auf Widerruf
+    bzw. Widerspruch ein.  \r\nEs besteht keine gesetz liche oder vertragliche Verpflichtung
+    zur Bereitstellung der \r\npersonenbezogenen Daten. Die Nichteinwilligung hat
+    lediglich zur Folge, dass Sie keinen E-Mail-Newsletter erhalten.  \r\nEine Weitergabe
+    an andere Empf\xE4nger erfolgt nicht.  \r\nMit der Teilnahme an diesem Gewinnspiel
+    willigt der Teilnehmer ein, dass SonnenMoor den Gewinner per E-Mail-Nachricht
+    kontaktieren darf.  \r\n  \r\nAbbruch und \xC4nderung des Gewinnspiels \nDer Veranstalter
+    ist berechtigt, das Gewinnspiel  ohne vorherige Ank\xFCndigung und unverz\xFCglich
+    aus \rwichtigem Grund abzubrechen. Das Gewinnspiel kann auch aufgrund h\xF6herer
+    Gewalt oder sonstiger \rgesetzlicher Gr\xFCnde eingestellt werden.  \r\n  \r\nSonstiges
+    \ \r\nSollten einzelne Bestimmungen der Teilnahmebedingungen unwirksam sein oder
+    werden, bleibt die \rGeltung der \xFCbrigen Bestimmungen hiervon unber\xFChrt.
+    An die Stelle der unwirksamen Bestimmung tritt eine im Einzelfall angemessene
+    Regelung, die dem Zweck der unwirksamen Bestimmung am \rehesten entspricht. \r"
