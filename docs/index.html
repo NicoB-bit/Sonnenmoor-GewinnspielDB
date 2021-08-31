@@ -201,6 +201,13 @@
                 }, 2000);
             }
         }
+        // Handle Divs focus
+        var gameContainer = document.getElementById('gameContainer');
+        gameContainer.onclick = function () {
+            var div = document.activeElement;
+            div.blur();
+        }
+
     }
 </script>
 </html>
