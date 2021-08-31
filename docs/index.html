@@ -110,7 +110,7 @@
     window.addEventListener('resize', checkRatio);
     // Handle Divs focus
     var gameContainer = document.getElementById('gameContainer');
-    gameContainer.onclick = function () {
+    gameContainer.onpointerdown = function () {
         console.log("nice");
         var div = document.activeElement;
         div.blur();
