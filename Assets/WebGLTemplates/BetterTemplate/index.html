@@ -106,6 +106,12 @@
     </div>
 </body>
 <script>
+    // Handle Divs focus
+    var gameContainer = document.getElementById('gameContainer');
+    gameContainer.onpointerdown = function () {
+        var div = document.activeElement;
+        div.blur();
+    }
     var startedMobile
     window.addEventListener('resize', checkRatio);
     var width = window.innerWidth

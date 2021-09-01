@@ -24,6 +24,10 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
+        CreateDiv();
+    }
+    public void CreateDiv()
+    {
         // bottom left -> top left -> top right -> bottom right
         Vector3[] v = new Vector3[4];
         GetComponent<RectTransform>().GetWorldCorners(v);

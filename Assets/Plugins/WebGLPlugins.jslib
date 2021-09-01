@@ -14,9 +14,11 @@
             div.style.color = "rgba(0, 0, 0, 0)";
             div.id = name + "InputFields";
             div.onclick = function(){
-                div.focus();
+                console.log("focused");
+                //div.focus();
                 div.value = "";
                 SendMessage("Manager", 'ReceiveInputDataWebGL', name + " ");
+                //set focus
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "3" + name);
             }
             div.oninput = function(){
@@ -25,6 +27,7 @@
             }
             div.onblur = function(){
                 console.log("outOfFocus");
+                //unfocus
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "4" + name);
             }
             document.body.appendChild(div);

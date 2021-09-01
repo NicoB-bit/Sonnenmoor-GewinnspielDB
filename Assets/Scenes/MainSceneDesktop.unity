@@ -891,6 +891,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 1
         m_CallState: 2
+      - m_Target: {fileID: 1659157075}
+        m_MethodName: DestroyDivsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &87770660
@@ -2622,6 +2633,7 @@ GameObject:
   - component: {fileID: 545312395}
   - component: {fileID: 545312394}
   - component: {fileID: 545312393}
+  - component: {fileID: 545312392}
   m_Layer: 5
   m_Name: InputFieldSurname
   m_TagString: Untagged
@@ -2651,6 +2663,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 345.99994}
   m_SizeDelta: {x: 932, y: 156}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &545312392
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 545312390}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162016ada9a344202a12e8b721a31911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ident: 1
 --- !u!114 &545312393
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4834,6 +4859,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1659157077}
+        m_MethodName: CreateDivs
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &918315107
@@ -4885,6 +4921,7 @@ GameObject:
   - component: {fileID: 931726451}
   - component: {fileID: 931726450}
   - component: {fileID: 931726449}
+  - component: {fileID: 931726452}
   m_Layer: 5
   m_Name: InputFieldForename
   m_TagString: Untagged
@@ -5030,6 +5067,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 931726447}
   m_CullTransparentMesh: 0
+--- !u!114 &931726452
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 931726447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162016ada9a344202a12e8b721a31911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ident: 0
 --- !u!1 &948288088
 GameObject:
   m_ObjectHideFlags: 0
@@ -5769,6 +5819,17 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1659157075}
+        m_MethodName: DestroyDivsButton
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &1032714133
@@ -6258,7 +6319,7 @@ MonoBehaviour:
   surnameIF: {fileID: 545312393}
   emailIF: {fileID: 1248226418}
   registerButton: {fileID: 1032714132}
-  newsletter: 0
+  newsletter: 1
 --- !u!1 &1240290029
 GameObject:
   m_ObjectHideFlags: 0
@@ -6550,6 +6611,7 @@ GameObject:
   - component: {fileID: 1248226420}
   - component: {fileID: 1248226419}
   - component: {fileID: 1248226418}
+  - component: {fileID: 1248226421}
   m_Layer: 5
   m_Name: InputFieldEmail
   m_TagString: Untagged
@@ -6695,6 +6757,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1248226416}
   m_CullTransparentMesh: 0
+--- !u!114 &1248226421
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1248226416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 162016ada9a344202a12e8b721a31911, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ident: 2
 --- !u!1 &1255832718
 GameObject:
   m_ObjectHideFlags: 0
@@ -8823,6 +8898,7 @@ GameObject:
   - component: {fileID: 1659157074}
   - component: {fileID: 1659157076}
   - component: {fileID: 1659157075}
+  - component: {fileID: 1659157077}
   m_Layer: 5
   m_Name: Manager
   m_TagString: Untagged
@@ -8921,6 +8997,25 @@ MonoBehaviour:
   scaleDownAnimC: {fileID: 7400000, guid: 7a9e8a782c84da940bdce098f6c1f91e, type: 2}
   scaleUpAnimC: {fileID: 7400000, guid: d03220f8d9bd64d45ad8ef7a4318b866, type: 2}
   imageScaledUp: 0
+--- !u!114 &1659157077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1659157072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6e044a95c11f1574d99f5abad68c06c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  forenameGO: {fileID: 931726447}
+  surnameGO: {fileID: 545312390}
+  emailGO: {fileID: 1248226416}
+  goArray:
+  - {fileID: 931726447}
+  - {fileID: 545312390}
+  - {fileID: 1248226416}
 --- !u!1 &1660236267
 GameObject:
   m_ObjectHideFlags: 0

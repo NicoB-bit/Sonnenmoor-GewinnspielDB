@@ -44,9 +44,6 @@ public class SC_LoginSystem : MonoBehaviour
         }
         registerUsername = forenameGO.GetComponent<InputField>().text + " " + surnameGO.GetComponent<InputField>().text;
         StartCoroutine("RegisterEnumerator");
-#if UNITY_WEBGL && !UNITY_EDITOR
-        DestroyDivs();
-#endif
     }
 
     IEnumerator RegisterEnumerator()
