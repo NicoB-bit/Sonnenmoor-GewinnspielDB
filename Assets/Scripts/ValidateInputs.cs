@@ -20,8 +20,7 @@ public class ValidateInputs : MonoBehaviour
     bool surnameValid;
     bool emailValid;
 
-    bool conditionsOfParticipation;
-    public bool newsletter;
+    bool result;
 
     public const string MatchEmailPattern =
             @"^(([\w-]+\.)+[\w-]+|([a-zA-Z]{1}|[\w-]{2,}))@"
@@ -30,8 +29,6 @@ public class ValidateInputs : MonoBehaviour
             + @"([a-zA-Z]+[\w-]+\.)+[a-zA-Z]{2,4})$";
     public const string MatchName =
            @"([a-zA-Z])";
-
-
     public void StringChanged(int identifier)
     {
         if (identifier == 2)
@@ -65,7 +62,11 @@ public class ValidateInputs : MonoBehaviour
                 else surnameValid = false;
             }
         }
-        CheckIfFinished();
+        if (emailValid && forenameValid && surnameValid)
+        {
+            registerButton.interactable = true;
+        }
+        else registerButton.interactable = false;
     }
     bool VerifyEmailAddress(string email)
     {
@@ -77,23 +78,4 @@ public class ValidateInputs : MonoBehaviour
         if (name != null && name.Length >= 3) return Regex.IsMatch(name, MatchName);
         else return false;
     }
-
-    public void CheckboxChanged(bool isNewsletter)
-    {
-        if (isNewsletter)
-            newsletter = !newsletter;
-        else
-            conditionsOfParticipation = !conditionsOfParticipation;
-        CheckIfFinished();
-    }
-
-    void CheckIfFinished()
-    {
-        if (emailValid && forenameValid && surnameValid && conditionsOfParticipation)
-        {
-            registerButton.interactable = true;
-        }
-        else registerButton.interactable = false;
-    }
-
 }

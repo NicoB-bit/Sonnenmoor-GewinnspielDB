@@ -307,8 +307,4 @@ public class ButtonManager : MonoBehaviour
         buttonsList[0].transform.parent.gameObject.SetActive(true);
         checkButtonGO.SetActive(true);
     }
-    public void OpenHomepage()
-    {
-        Application.OpenURL("https://www.sonnenmoor.at/");
-    }
 }

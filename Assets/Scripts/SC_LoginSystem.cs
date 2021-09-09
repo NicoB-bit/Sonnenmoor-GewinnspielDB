@@ -21,8 +21,6 @@ public class SC_LoginSystem : MonoBehaviour
     [SerializeField]
     GameObject surnameGO;
     [SerializeField]
-    GameObject newsletterGO;
-    [SerializeField]
     GameObject successGO;
 
     string[] errorMessages = new string[3] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!" };
@@ -30,20 +28,12 @@ public class SC_LoginSystem : MonoBehaviour
     [DllImport("__Internal")]
     private static extern void DestroyDivs();
 
-    public void DestroyDivsButton()
-    {
-        DestroyDivs();
-    }
-
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
-        if (newsletterGO.GetComponent<Toggle>().isOn)
-        {
-            registerEmail += "*";
-        }
         registerUsername = forenameGO.GetComponent<InputField>().text + " " + surnameGO.GetComponent<InputField>().text;
         StartCoroutine("RegisterEnumerator");
+        DestroyDivs();
     }
 
     IEnumerator RegisterEnumerator()
@@ -57,9 +47,8 @@ public class SC_LoginSystem : MonoBehaviour
 
         using (UnityWebRequest www = UnityWebRequest.Post(rootURL + "register.php", form))
         {
-            www.timeout = 10;
-
             yield return www.SendWebRequest();
+
             if (www.isHttpError || www.isNetworkError)
             {
                 errorMessage = www.error;

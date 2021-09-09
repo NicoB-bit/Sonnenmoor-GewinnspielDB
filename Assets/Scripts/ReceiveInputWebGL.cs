@@ -30,8 +30,6 @@ public class ReceiveInputWebGL : MonoBehaviour
 
     public void ReceiveInputDataWebGL(string value)
     {
-        // 3 -> select
-        // 4 -> unselect
         if (value.StartsWith("3") || value.StartsWith("4"))
         {
             if (value.StartsWith("3"))
@@ -58,15 +56,5 @@ public class ReceiveInputWebGL : MonoBehaviour
                 emailGO.GetComponent<InputField>().text = value.Substring(1);
             }
         }
-    }
-
-    public void CreateDivs()
-    {
-#if UNITY_WEBGL && !UNITY_EDITOR
-        foreach (GameObject div in goArray)
-        {
-            div.GetComponent<KeyboardClass>().CreateDiv();
-        }
-#endif
     }
 }
