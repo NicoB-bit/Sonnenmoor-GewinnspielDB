@@ -29,6 +29,10 @@
             height: calc(var(--vh, 1vh) * 100);
             display: block;
         }
+            /* try to handle mobile dialog */
+            canvas + * {
+                z-index: 2;
+            }
 
         .logo {
             display: block;
