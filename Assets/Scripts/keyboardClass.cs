@@ -39,6 +39,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
         height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         width = (screenPostr.x - screenPostl.x).ToString() + "px";
         debugTXT.text = "Creating div";
+        WebGLInput.captureAllKeyboardInput = false;
         focusHandleAction(ident, x, y, height, width);
     }
 #endif

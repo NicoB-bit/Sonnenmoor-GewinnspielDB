@@ -100,4 +100,10 @@ public class SC_LoginSystem : MonoBehaviour
         registerUsername = "";
         registerPoints = "";
     }
+
+    public void DestroyDivsCall()
+    {
+        WebGLInput.captureAllKeyboardInput = true;
+        DestroyDivs();
+    }
 }

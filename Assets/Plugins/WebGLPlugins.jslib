@@ -22,11 +22,9 @@
             }
             div.oninput = function(){
                 var message = name + div.value;
-                console.log("Sending input...");
                 SendMessage("Manager", 'ReceiveInputDataWebGL', message);
             }
             div.onblur = function(){
-                console.log("outOfFocus");
                 SendMessage("Manager", 'ReceiveInputDataWebGL', "4" + name);
             }
             document.body.appendChild(div);
