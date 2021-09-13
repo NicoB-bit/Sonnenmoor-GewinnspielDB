@@ -21,6 +21,9 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
     [SerializeField]
     string ident;
 
+    [SerializeField]
+    Text debugTXT;
+
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
@@ -35,6 +38,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
         y = (Screen.height - screenPostr.y).ToString() + "px";
         height = (screenPostr.y - screenPosbr.y).ToString() + "px";
         width = (screenPostr.x - screenPostl.x).ToString() + "px";
+        debugTXT.text = "Creating div";
         focusHandleAction(ident, x, y, height, width);
     }
 #endif

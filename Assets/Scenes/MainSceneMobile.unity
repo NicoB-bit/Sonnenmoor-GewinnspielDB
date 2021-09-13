@@ -5692,6 +5692,7 @@ MonoBehaviour:
   - {fileID: 5908038749127579879}
   - {fileID: 5908038748976173582}
   - {fileID: 5908038749598609656}
+  debugTXT: {fileID: 294328561}
 --- !u!1 &1694411926
 GameObject:
   m_ObjectHideFlags: 0
@@ -8211,6 +8212,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ident: 1
+  debugTXT: {fileID: 294328561}
 --- !u!114 &5908038748976173569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8726,6 +8728,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ident: 0
+  debugTXT: {fileID: 294328561}
 --- !u!1 &5908038749295143706
 GameObject:
   m_ObjectHideFlags: 0
@@ -9164,6 +9167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ident: 2
+  debugTXT: {fileID: 294328561}
 --- !u!1 &5908038749639507956
 GameObject:
   m_ObjectHideFlags: 0
