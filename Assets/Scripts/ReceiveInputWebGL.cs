@@ -15,6 +15,9 @@ public class ReceiveInputWebGL : MonoBehaviour
     [SerializeField]
     GameObject[] goArray = new GameObject[3];
 
+    [SerializeField]
+    Text debugTXT;
+
     [System.Runtime.InteropServices.DllImport("__Internal")]
     static extern bool IsMobile();
 
@@ -30,6 +33,7 @@ public class ReceiveInputWebGL : MonoBehaviour
 
     public void ReceiveInputDataWebGL(string value)
     {
+        debugTXT.text = "Text: " + value;
         if (value.StartsWith("3") || value.StartsWith("4"))
         {
             if (value.StartsWith("3"))
