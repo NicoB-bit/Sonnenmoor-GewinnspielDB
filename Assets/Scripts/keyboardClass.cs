@@ -14,6 +14,7 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
     private static extern void focusHandleAction(string _name, string _x, string _y, string _height, string _width);
     [DllImport("__Internal")]
     private static extern bool IsMobile();
+
     bool isMobile;
 
     string x;
@@ -24,10 +25,14 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
     [SerializeField]
     string ident;
 
+    [SerializeField]
+    Text debugText;
+
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
         isMobile = IsMobile();
+        debugText.text = isMobile.ToString();
         if(isMobile)
         {
             CreateDiv();
