@@ -31,7 +31,7 @@
         document.body.appendChild(div);
     },
     Debug: function(){
-        SendMessage("Manager", 'ReceiveInputDataWebGL', /Android|iPhone|iPad|IEMobile/.test(navigator.userAgent))
+        //SendMessage("Manager", 'ReceiveInputDataWebGL', /Android|iPhone|iPad|IEMobile/.test(navigator.userAgent))
     },
     DestroyDivs: function(){
         var elem1 = document.getElementById('0InputFields');
