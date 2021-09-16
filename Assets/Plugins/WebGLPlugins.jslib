@@ -31,7 +31,7 @@
         document.body.appendChild(div);
     },
     Debug: function(){
-        SendMassage("Manager", 'ReceiveInputDataWebGL', navigator.userAgent)
+        SendMessage("Manager", 'ReceiveInputDataWebGL', navigator.userAgent)
     },
     DestroyDivs: function(){
         var elem1 = document.getElementById('0InputFields');
