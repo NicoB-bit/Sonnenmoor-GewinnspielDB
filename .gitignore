@@ -10,6 +10,12 @@
 /[Ll]ogs/
 /[Mm]emoryCaptures/
 
+#VS and Ingore
+/.collabignore
+/.collabignore~local
+/.gitignore.swp
+/.vsconfig
+
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
 

@@ -21,6 +21,7 @@ public class ReceiveInputWebGL : MonoBehaviour
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
+        WebGLInput.captureAllKeyboardInput = false;
         if(IsMobile())
         {
             //WebGLInput.captureAllKeyboardInput = false;

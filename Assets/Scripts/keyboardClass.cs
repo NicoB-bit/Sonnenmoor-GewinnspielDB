@@ -12,6 +12,9 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
     private static extern void createRect(string _name, string _x, string _y, string _height, string _width);
     [DllImport("__Internal")]
     private static extern void focusHandleAction(string _name, string _x, string _y, string _height, string _width);
+    [DllImport("__Internal")]
+    private static extern bool IsMobile();
+    bool isMobile;
 
     string x;
     string y;
@@ -24,7 +27,11 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
-        CreateDiv();
+        isMobile = IsMobile();
+        if(isMobile)
+        {
+            CreateDiv();
+        }
     }
     public void CreateDiv()
     {

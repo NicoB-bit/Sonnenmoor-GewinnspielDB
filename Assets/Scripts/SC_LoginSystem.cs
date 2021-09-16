@@ -25,14 +25,22 @@ public class SC_LoginSystem : MonoBehaviour
     [SerializeField]
     GameObject successGO;
 
-    string[] errorMessages = new string[3] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!" };
+    string[] errorMessages = new string[4] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!", "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut!" };
 
     [DllImport("__Internal")]
     private static extern void DestroyDivs();
 
+    [DllImport("__Internal")]
+    private static extern bool IsMobile();
     public void DestroyDivsButton()
     {
-        DestroyDivs();
+#if !UNITY_EDITOR
+        bool isMobile = IsMobile();
+        if(isMobile)
+        {
+            DestroyDivs();
+        }
+#endif
     }
 
     public void RegisterPressed()
@@ -65,6 +73,10 @@ public class SC_LoginSystem : MonoBehaviour
                 errorMessage = www.error;
                 Success(1);
                 Debug.Log(errorMessage.ToString());
+                if (errorMessage.ToString() == "Request timeout")
+                {
+                    Success(4);
+                }
             }
             else
             {
