@@ -39,7 +39,7 @@
         elem3.remove();
     },
     IsMobile: function (){
-        if(/Android|iPhone|iPad|IEMobile/i.test(navigator.userAgent))
+        if(/Android|iPhone|iPad|IEMobile/.test(navigator.userAgent))
         {
             return true;
         }
