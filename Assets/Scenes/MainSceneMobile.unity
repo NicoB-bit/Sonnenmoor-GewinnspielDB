@@ -4132,6 +4132,7 @@ MonoBehaviour:
   - {fileID: 5144621952605862143}
   - {fileID: 5144621952320041494}
   - {fileID: 5144621954024657120}
+  textDebug: {fileID: 146833364}
 --- !u!1 &1694411926
 GameObject:
   m_ObjectHideFlags: 0
@@ -10910,7 +10911,7 @@ MonoBehaviour:
   surnameIF: {fileID: 5144621952320041497}
   emailIF: {fileID: 5144621954024657122}
   registerButton: {fileID: 5144621952773344004}
-  newsletter: 1
+  newsletter: 0
 --- !u!1 &5144621954119902884
 GameObject:
   m_ObjectHideFlags: 0

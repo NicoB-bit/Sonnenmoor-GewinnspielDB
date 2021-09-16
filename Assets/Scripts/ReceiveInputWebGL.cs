@@ -18,9 +18,13 @@ public class ReceiveInputWebGL : MonoBehaviour
     [System.Runtime.InteropServices.DllImport("__Internal")]
     static extern bool IsMobile();
 
+    [System.Runtime.InteropServices.DllImport("__Internal")]
+    static extern bool Debug();
+
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
+        Debug();
         WebGLInput.captureAllKeyboardInput = false;
         if(IsMobile())
         {
@@ -29,8 +33,12 @@ public class ReceiveInputWebGL : MonoBehaviour
     }
 #endif
 
+    [SerializeField]
+    GameObject textDebug;
+
     public void ReceiveInputDataWebGL(string value)
     {
+        textDebug.GetComponent<Text>().text = value;
         // 3 -> select
         // 4 -> unselect
         if (value.StartsWith("3") || value.StartsWith("4"))
