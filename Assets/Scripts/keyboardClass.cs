@@ -25,14 +25,10 @@ public class KeyboardClass : MonoBehaviour, ISelectHandler
     [SerializeField]
     string ident;
 
-    [SerializeField]
-    Text debugText;
-
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
         isMobile = IsMobile();
-        debugText.text = isMobile.ToString();
         if(isMobile)
         {
             CreateDiv();

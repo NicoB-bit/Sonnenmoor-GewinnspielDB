@@ -18,27 +18,21 @@ public class ReceiveInputWebGL : MonoBehaviour
     [System.Runtime.InteropServices.DllImport("__Internal")]
     static extern bool IsMobile();
 
-    [System.Runtime.InteropServices.DllImport("__Internal")]
-    static extern bool Debug();
+    bool isMobile;
 
 #if UNITY_WEBGL && !UNITY_EDITOR
     void Start()
     {
-        Debug();
-        WebGLInput.captureAllKeyboardInput = false;
-        if(IsMobile())
+        isMobile = IsMobile();  
+        if(isMobile)
         {
-            //WebGLInput.captureAllKeyboardInput = false;
+            WebGLInput.captureAllKeyboardInput = false;
         }
     }
 #endif
 
-    [SerializeField]
-    GameObject textDebug;
-
     public void ReceiveInputDataWebGL(string value)
     {
-        textDebug.GetComponent<Text>().text = value;
         // 3 -> select
         // 4 -> unselect
         if (value.StartsWith("3") || value.StartsWith("4"))
@@ -72,9 +66,13 @@ public class ReceiveInputWebGL : MonoBehaviour
     public void CreateDivs()
     {
 #if UNITY_WEBGL && !UNITY_EDITOR
-        foreach (GameObject div in goArray)
+
+        if(isMobile)
         {
-            div.GetComponent<KeyboardClass>().CreateDiv();
+            foreach (GameObject div in goArray)
+            {
+                div.GetComponent<KeyboardClass>().CreateDiv();
+            }
         }
 #endif
     }

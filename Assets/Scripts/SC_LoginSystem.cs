@@ -12,7 +12,8 @@ public class SC_LoginSystem : MonoBehaviour
     public string registerPoints = "";
     string errorMessage = "";
 
-    string rootURL = "https://sonnenmoor.000webhostapp.com/"; //Path where php files are located
+    //string rootURL = "https://sonnenmoor.000webhostapp.com/"; //Path where php files are located
+    string rootURL = "https://gewinnspiel.sonnenmoor.at/Register/"; //Path where php files are located
 
     [SerializeField]
     GameObject emailGO;
@@ -24,8 +25,10 @@ public class SC_LoginSystem : MonoBehaviour
     GameObject newsletterGO;
     [SerializeField]
     GameObject successGO;
+    [SerializeField]
+    GameObject websiteButtonGO;
 
-    string[] errorMessages = new string[4] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!", "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut!" };
+    string[] errorMessages = new string[5] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!", "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut!", "Bitte warten Sie einen Moment..." };
 
     [DllImport("__Internal")]
     private static extern void DestroyDivs();
@@ -66,6 +69,7 @@ public class SC_LoginSystem : MonoBehaviour
         using (UnityWebRequest www = UnityWebRequest.Post(rootURL + "register.php", form))
         {
             www.timeout = 10;
+            Success(4);
 
             yield return www.SendWebRequest();
             if (www.isHttpError || www.isNetworkError)
@@ -75,7 +79,7 @@ public class SC_LoginSystem : MonoBehaviour
                 Debug.Log(errorMessage.ToString());
                 if (errorMessage.ToString() == "Request timeout")
                 {
-                    Success(4);
+                    Success(3);
                 }
             }
             else
@@ -108,6 +112,10 @@ public class SC_LoginSystem : MonoBehaviour
     void Success(int errorMessage)
     {
         successGO.SetActive(true);
+        if (errorMessage != 4)
+        {
+            websiteButtonGO.GetComponent<Button>().interactable = true;
+        }
         if (errorMessage != 0)
         {
             successGO.GetComponentInChildren<Text>().text = errorMessages[errorMessage];
