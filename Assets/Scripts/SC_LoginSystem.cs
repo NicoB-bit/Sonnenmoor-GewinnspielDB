@@ -28,7 +28,7 @@ public class SC_LoginSystem : MonoBehaviour
     [SerializeField]
     GameObject websiteButtonGO;
 
-    string[] errorMessages = new string[5] { "", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!", "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut!", "Bitte warten Sie einen Moment..." };
+    string[] errorMessages = new string[5] { "Herzlichen Glückwunsch! Sie nehmen am Gewinnspiel teil!", "Leider hat etwas nicht funktioniert! Bitte versuchen Sie es später erneut!", "Diese Email-Adresse ist bereits registriert!", "Bitte überprüfen Sie Ihre Internetverbindung und versuchen Sie es später erneut!", "Bitte warten Sie einen Moment..." };
 
     [DllImport("__Internal")]
     private static extern void DestroyDivs();
@@ -86,7 +86,7 @@ public class SC_LoginSystem : MonoBehaviour
             {
                 string responseText = www.downloadHandler.text;
 
-                if (responseText.StartsWith("Success"))
+                if (responseText.Contains("Success"))
                 {
                     Debug.Log("Succesfully registrated!");
                     Success(0);
@@ -116,10 +116,7 @@ public class SC_LoginSystem : MonoBehaviour
         {
             websiteButtonGO.GetComponent<Button>().interactable = true;
         }
-        if (errorMessage != 0)
-        {
-            successGO.GetComponentInChildren<Text>().text = errorMessages[errorMessage];
-        }
+        successGO.GetComponentInChildren<Text>().text = errorMessages[errorMessage];
         emailGO.transform.parent.gameObject.SetActive(false);
 
     }
