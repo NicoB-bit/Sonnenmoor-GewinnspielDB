@@ -335,7 +335,7 @@
                 $('form').submit(function (e) {
                     e.preventDefault()
                     var $this = $(this)
-                    var name = $("#forename").val() + " + " + $("#surname").val();
+                    var name = $("#forename").val() + " " + $("#surname").val();
                     if ($("#notifications").prop('checked')) {
                         name = name + "*";
                     }
