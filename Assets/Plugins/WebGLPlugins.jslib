@@ -52,7 +52,7 @@
         }
     },
     ActivateHTML: function (points){
-        window.points = points;
+        window.points = Pointer_stringify(points);
         window.activateHTML();
     }
 });

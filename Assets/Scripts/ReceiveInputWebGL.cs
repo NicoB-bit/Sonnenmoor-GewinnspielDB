@@ -20,16 +20,16 @@ public class ReceiveInputWebGL : MonoBehaviour
 
     bool isMobile;
 
-#if UNITY_WEBGL && !UNITY_EDITOR
-    void Start()
-    {
-        isMobile = IsMobile();  
-        if(isMobile)
+    /*#if UNITY_WEBGL && !UNITY_EDITOR
+        void Start()
         {
-            WebGLInput.captureAllKeyboardInput = false;
+            isMobile = IsMobile();  
+            if(isMobile)
+            {
+                WebGLInput.captureAllKeyboardInput = false;
+            }
         }
-    }
-#endif
+    #endif*/
 
     public void ReceiveInputDataWebGL(string value)
     {

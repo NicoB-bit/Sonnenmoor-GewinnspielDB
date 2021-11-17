@@ -46,6 +46,11 @@ public class SC_LoginSystem : MonoBehaviour
 #endif
     }
 
+    private void Start()
+    {
+        WebGLInput.captureAllKeyboardInput = false;
+    }
+
     public void RegisterPressed()
     {
         registerEmail = emailGO.GetComponent<InputField>().text;
