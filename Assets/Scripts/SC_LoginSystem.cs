@@ -128,4 +128,12 @@ public class SC_LoginSystem : MonoBehaviour
         registerUsername = "";
         registerPoints = "";
     }
+
+
+    [DllImport("__Internal")]
+    private static extern bool ActivateHTML(string points);
+    public void ActivateHTMLPressed()
+    {
+        ActivateHTML(registerPoints);
+    }
 }

@@ -51,4 +51,8 @@
             return false;
         }
     },
+    ActivateHTML: function (points){
+        window.points = points;
+        window.activateHTML();
+    }
 });
