@@ -379,112 +379,102 @@
     </div>
 </body>
 <script>
-    try {
-        // Handle Divs focus
-        var gameContainer = $('#gameContainer');
-        gameContainer.onpointerdown = function () {
-            var div = document.activeElement;
-            div.blur();
-        }
-        var startedMobile
-        window.addEventListener('resize', checkRatio);
+    var startedMobile
+    window.addEventListener('resize', checkRatio);
+    var width = window.innerWidth
+    var height = window.innerHeight
+    var startRatio = height / width
+    if (startRatio >= 1) {
+        startedMobile = true
+    }
+    else {
+        startedMobile = false
+    }
+    function checkRatio() {
         var width = window.innerWidth
         var height = window.innerHeight
-        var startRatio = height / width
-        if (startRatio >= 1) {
-            startedMobile = true
-        }
-        else {
-            startedMobile = false
-        }
-        function checkRatio() {
-            var width = window.innerWidth
-            var height = window.innerHeight
-            var ratio = height / width
-            var isMobileNow
-            if (ratio >= 1) {
-                isMobileNow = true
-            }
-            else {
-                isMobileNow = false
-            }
-            if (isMobileNow != startedMobile) {
-                location = location
-            }
-        }
-        const script = document.createElement('script')
         var ratio = height / width
-        // Load Mobile
-        if (startedMobile) {
-            script.src = 'Build/UnityLoader.js'
+        var isMobileNow
+        if (ratio >= 1) {
+            isMobileNow = true
         }
-        //Load Desktop
         else {
-            script.src = 'BuildDesktop/UnityLoader.js'
+            isMobileNow = false
         }
-        document.body.append(script)
-        ///////// Handle cookies
-        var open = window.XMLHttpRequest.prototype.open,
-            send = window.XMLHttpRequest.prototype.send;
-        function openReplacement(method, url, async, user, password) {
-            this._url = url;
-            return open.apply(this, arguments);
-        }
-        function sendReplacement(data) {
-            if (this.onreadystatechange) {
-                this._onreadystatechange = this.onreadystatechange;
-            }
-            this.onreadystatechange = onReadyStateChangeReplacement;
-            if (!this._url.includes("unity3d")) {
-                return send.apply(this, arguments);
-            }
-        }
-        function onReadyStateChangeReplacement() {
-            if (this._onreadystatechange) {
-                return this._onreadystatechange.apply(this, arguments);
-            }
-        }
-        window.XMLHttpRequest.prototype.open = openReplacement;
-        window.XMLHttpRequest.prototype.send = sendReplacement;
-        // Onload
-        script.onload = () => {
-            // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property to the root of the document
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-            // GameInstance
-            var width = window.innerWidth
-            var height = window.innerHeight
-            var ratio = height / width
-            var gameInstance
-            if (startedMobile) {
-                gameInstance = UnityLoader.instantiate("gameContainer", "Build/docs.json", { onProgress: UnityProgress });
-            }
-            else {
-                gameInstance = UnityLoader.instantiate("gameContainer", "BuildDesktop/docs.json", { onProgress: UnityProgress });
-            }
-            function UnityProgress(gameInstance, progress) {
-                if (!gameInstance.Module) {
-                    return;
-                }
-                const loader = document.querySelector("#loader");
-                if (!gameInstance.progress) {
-                    const progress = document.querySelector("#loader .progress");
-                    progress.style.display = "block";
-                    gameInstance.progress = progress.querySelector(".full");
-                    loader.querySelector(".spinner").style.display = "none";
-                }
-                gameInstance.progress.style.transform = `scaleX(${progress})`;
-                if (progress === 1 && !gameInstance.removeTimeout) {
-                    gameInstance.removeTimeout = setTimeout(function () {
-                        loader.style.display = "none";
-                    }, 2000);
-                }
-            }
+        if (isMobileNow != startedMobile && $("#gameContainer").is(":visible")) {
+            location = location
         }
     }
-    catch (err) {
-        alert(err.message);
+    const script = document.createElement('script')
+    var ratio = height / width
+    // Load Mobile
+    if (startedMobile) {
+        script.src = 'Build/UnityLoader.js'
+    }
+    //Load Desktop
+    else {
+        script.src = 'BuildDesktop/UnityLoader.js'
+    }
+    document.body.append(script)
+    ///////// Handle cookies
+    var open = window.XMLHttpRequest.prototype.open,
+        send = window.XMLHttpRequest.prototype.send;
+    function openReplacement(method, url, async, user, password) {
+        this._url = url;
+        return open.apply(this, arguments);
+    }
+    function sendReplacement(data) {
+        if (this.onreadystatechange) {
+            this._onreadystatechange = this.onreadystatechange;
+        }
+        this.onreadystatechange = onReadyStateChangeReplacement;
+        if (!this._url.includes("unity3d")) {
+            return send.apply(this, arguments);
+        }
+    }
+    function onReadyStateChangeReplacement() {
+        if (this._onreadystatechange) {
+            return this._onreadystatechange.apply(this, arguments);
+        }
+    }
+    window.XMLHttpRequest.prototype.open = openReplacement;
+    window.XMLHttpRequest.prototype.send = sendReplacement;
+    /////////////////////////////
+    // Onload
+    script.onload = () => {
+        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
+        let vh = window.innerHeight * 0.01;
+        // Then we set the value in the --vh custom property to the root of the document
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+        // GameInstance
+        var width = window.innerWidth
+        var height = window.innerHeight
+        var ratio = height / width
+        var gameInstance
+        if (startedMobile) {
+            gameInstance = UnityLoader.instantiate("gameContainer", "Build/docs.json", { onProgress: UnityProgress });
+        }
+        else {
+            gameInstance = UnityLoader.instantiate("gameContainer", "BuildDesktop/docs.json", { onProgress: UnityProgress });
+        }
+        function UnityProgress(gameInstance, progress) {
+            if (!gameInstance.Module) {
+                return;
+            }
+            const loader = document.querySelector("#loader");
+            if (!gameInstance.progress) {
+                const progress = document.querySelector("#loader .progress");
+                progress.style.display = "block";
+                gameInstance.progress = progress.querySelector(".full");
+                loader.querySelector(".spinner").style.display = "none";
+            }
+            gameInstance.progress.style.transform = `scaleX(${progress})`;
+            if (progress === 1 && !gameInstance.removeTimeout) {
+                gameInstance.removeTimeout = setTimeout(function () {
+                    loader.style.display = "none";
+                }, 2000);
+            }
+        }
     }
 </script>
 </html>
