@@ -394,10 +394,12 @@
     // Load Mobile
     if (startedMobile) {
         script.src = 'Build/UnityLoader.js'
+        screen.orientation.lock("portrait")
     }
     //Load Desktop
     else {
         script.src = 'BuildDesktop/UnityLoader.js'
+        screen.orientation.lock("landscape")
     }
     document.body.append(script)
     ///////// Handle cookies
