@@ -379,7 +379,18 @@
     </div>
 </body>
 <script>
+    var startedMobile
+    var width = window.innerWidth
+    var height = window.innerHeight
+    var startRatio = height / width
+    if (startRatio >= 1) {
+        startedMobile = true
+    }
+    else {
+        startedMobile = false
+    }
     const script = document.createElement('script')
+    var ratio = height / width
     // Load Mobile
     if (startedMobile) {
         script.src = 'Build/UnityLoader.js'
