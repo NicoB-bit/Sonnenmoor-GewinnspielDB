@@ -1,118 +1,13 @@
 <!DOCTYPE html>
 <html lang="en-us">
-
 <head>
     <meta charset="utf-8">
-    <meta id="sysviewport" name="viewport" content="initial-scale=0.79, minimum-scale=0.79, maximum-scale=0.79, user-scalable=no, width=device-width, height=device-height">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Sonnenmoor Gewinnspiel</title>
     <style>
         @font-face {
             font-family: MainFont;
             src: url("./Regular.otf");
-        }
-
-        html {
-            box-sizing: border-box;
-        }
-
-        *, *:before, *:after {
-            box-sizing: inherit;
-        }
-
-        body {
-            margin: 0;
-            background: #444;
-        }
-
-            body * {
-                font-family: MainFont;
-            }
-
-        #gameContainer {
-            width: 100vw;
-            height: calc(var(--vh, 1vh) * 100);
-        }
-
-        canvas {
-            width: 100vw;
-            height: calc(var(--vh, 1vh) * 100);
-            display: block;
-        }
-            /* try to handle mobile dialog */
-            canvas + * {
-                z-index: 2;
-            }
-
-        .logo {
-            display: block;
-            max-width: 100vw;
-            max-height: 70vh;
-        }
-
-        .progress {
-            margin: 1.5em;
-            margin-left: -25vw;
-            border: 1px solid #427555;
-            width: 50vw;
-            position: fixed;
-            bottom: 20px;
-            display: none;
-            left: 50%;
-        }
-
-            .progress .full {
-                margin: 2px;
-                background: #427555;
-                height: 1em;
-                transform-origin: top left;
-            }
-
-        #loader {
-            position: absolute;
-            left: 0;
-            top: 0;
-            width: 100vw;
-            height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .spinner,
-        .spinner:after {
-            border-radius: 50%;
-            width: 5em;
-            height: 5em;
-        }
-
-        .spinner {
-            margin: 10px;
-            font-size: 10px;
-            position: relative;
-            text-indent: -9999em;
-            border-top: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-right: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-bottom: 1.1em solid rgba(255, 255, 255, 0.2);
-            border-left: 1.1em solid #ffffff;
-            transform: translateZ(0);
-            animation: spinner-spin 1.1s infinite linear;
-        }
-
-        @keyframes spinner-spin {
-            0% {
-                transform: rotate(0deg);
-            }
-
-            100% {
-                transform: rotate(360deg);
-            }
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
         }
 
         #form {
@@ -245,12 +140,8 @@
     </style>
     <script src="./Assets/jquery-3.6.0.min.js"></script>
 </head>
-<body>
-    <div id="gameContainer"></div>
-    <div id="loader">
-        <div class="spinner"></div>
-        <div class="progress"><div class="full"></div></div>
-    </div>
+<body style="text-align: center">
+    <canvas id="unity-canvas" width=1080 height=2340 style="width: 1080px; height: 2340px; background: url('Build/docs.jpg.gz') center / cover"> </canvas>
     <div class="lastPart" hidden>
         <div id="registration">
             <form action="https://gewinnspiel.sonnenmoor.at/Register/register.php" id="form" method="POST">
@@ -295,14 +186,14 @@
                 Veranstalter
                 Veranstalter dieses Gewinnspiels ist die SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstraße
                 14, 5102 Anthering. Mit der Teilnahme am Gewinnspiel erklärt sich der Teilnehmer mit den folgenden Bestimmungen und Teilnahmebedingungen einverstanden: Die Teilnahme an diesem Gewinnspiel ist kostenlos und unabhängig davon, ob Sie die Dienstleistungen oder Produkte der SonnenMoor Vertriebs- und Verwertungs-GmbH nutzen.
-                Teilnehmer im Sinne des Gewinnspiels ist diejenige natürliche Person, die im Teilnahmezeitraum die die im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind natürliche Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Angestellte des Veranstalters und Mitarbeiter von Partnerunternehmen sind von der Teilnahme ausgeschlossen. Das Gewinnspiel beginnt am 1.10. um 8 Uhr und endet am 29.10. 8 Uhr (Teilnahmezeitraum). Im Fall einer schuldhaften Verletzung der Teilnahmebedingungen ist der Veranstalter berechtigt, den Teilnehmer mit sofortiger Wirkung auszuschließen.
+                Teilnehmer im Sinne des Gewinnspiels ist diejenige natürliche Person, die im Teilnahmezeitraum die die im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind natürliche Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Angestellte des Veranstalters und Mitarbeiter von Partnerunternehmen sind von der Teilnahme ausgeschlossen. Das Gewinnspiel beginnt am 03.05.2022 um 8 Uhr und endet am 15.07.2022 8 Uhr (Teilnahmezeitraum). Im Fall einer schuldhaften Verletzung der Teilnahmebedingungen ist der Veranstalter berechtigt, den Teilnehmer mit sofortiger Wirkung auszuschließen.
                 III. Gewinn und Gewinnermittlung
                 Je nach Ihrem erfolgreichen Punkte-Score nehmen Sie an der Verlosung folgender
                 Moor- und Kräuterschätze teil:
-                28-31 Punkte Verlosung von 5 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 150,--
-                21-27 Punkte Verlosung von 10 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 100,--
-                15-20 Punkte Verlosung von 15 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 50,--
-                Die Ziehung der Gewinner erfolgt am 3.11.2021. Die Gewinner werden schriftlich per Email Nachricht kontaktiert. Bestätigt der Gewinner den Gewinn nicht innerhalb von fünf Werktagen, so verfällt der Gewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren als Gewinner ermittelt. Der Gewinnanspruch ist nicht übertragbar. Eine Barauszahlung, Änderung oder Umtausch des Gewinns ist ausgeschlossen. Sämtliche mit dem Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden Betriebs-, Neben- und Folgekosten trägt der Teilnehmer.
+                28-31 Punkte Verlosung von 3 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 150,-- &euro;
+                21-27 Punkte Verlosung von 5 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 100,-- &euro;
+                15-20 Punkte Verlosung von 10 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 50,-- &euro;
+                Die Ziehung der Gewinner erfolgt am 15.07.2022. Die Gewinner werden schriftlich per Email Nachricht kontaktiert. Bestätigt der Gewinner den Gewinn nicht innerhalb von fünf Werktagen, so verfällt der Gewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren als Gewinner ermittelt. Der Gewinnanspruch ist nicht übertragbar. Eine Barauszahlung, Änderung oder Umtausch des Gewinns ist ausgeschlossen. Sämtliche mit dem Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden Betriebs-, Neben- und Folgekosten trägt der Teilnehmer.
                 Datensicherheit und Datenschutz
                 Die personenbezogenen Daten der Teilnehmer werden vom Veranstalter unter Beachtung der datenschutzrechtlichen Bestimmungen genutzt und erhoben. Die personenbezogenen Daten beinhalten Namen und die E-Mail-Adresse.
                 Nach Registrierung Ihrer Daten erfolgt eine Verarbeitung der oben angeführten Daten durch den datenschutzrechtlich Verantwortlichen SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstraße
@@ -377,90 +268,74 @@
             };
         </script>
     </div>
-</body>
-<script>
-    var startedMobile
-    var width = window.innerWidth
-    var height = window.innerHeight
-    var startRatio = height / width
-    if (startRatio >= 1) {
-        startedMobile = true
-    }
-    else {
-        startedMobile = false
-    }
-    const script = document.createElement('script')
-    var ratio = height / width
-    // Load Mobile
-    if (startedMobile) {
-        script.src = 'Build/UnityLoader.js'
-        window.screen.orientation.lock("portrait")
-    }
-    //Load Desktop
-    else {
-        script.src = 'BuildDesktop/UnityLoader.js'
-        window.screen.orientation.lock("landscape")
-    }
-    document.body.append(script)
-    ///////// Handle cookies
-    var open = window.XMLHttpRequest.prototype.open,
-        send = window.XMLHttpRequest.prototype.send;
-    function openReplacement(method, url, async, user, password) {
-        this._url = url;
-        return open.apply(this, arguments);
-    }
-    function sendReplacement(data) {
-        if (this.onreadystatechange) {
-            this._onreadystatechange = this.onreadystatechange;
-        }
-        this.onreadystatechange = onReadyStateChangeReplacement;
-        if (!this._url.includes("unity3d")) {
-            return send.apply(this, arguments);
-        }
-    }
-    function onReadyStateChangeReplacement() {
-        if (this._onreadystatechange) {
-            return this._onreadystatechange.apply(this, arguments);
-        }
-    }
-    window.XMLHttpRequest.prototype.open = openReplacement;
-    window.XMLHttpRequest.prototype.send = sendReplacement;
-    /////////////////////////////
-    // Onload
-    script.onload = () => {
-        // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-        let vh = window.innerHeight * 0.01;
-        // Then we set the value in the --vh custom property to the root of the document
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-        // GameInstance
+    <script>
+        //fill the whole browser client area with the game canvas:
+        var meta = document.createElement('meta');
+        meta.name = 'viewport';
+        meta.content = 'width=device-width, height=device-height, initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+        document.getElementsByTagName('head')[0].appendChild(meta);
+
+
+        var startedMobile
         var width = window.innerWidth
         var height = window.innerHeight
-        var ratio = height / width
-        var gameInstance
-        if (startedMobile) {
-            gameInstance = UnityLoader.instantiate("gameContainer", "Build/docs.json", { onProgress: UnityProgress });
+        var startRatio = height / width
+        if (startRatio >= 1) {
+            startedMobile = true
         }
         else {
-            gameInstance = UnityLoader.instantiate("gameContainer", "BuildDesktop/docs.json", { onProgress: UnityProgress });
+            startedMobile = false
         }
-        function UnityProgress(gameInstance, progress) {
-            if (!gameInstance.Module) {
-                return;
+        const script = document.createElement('script');
+        var ratio = height / width;
+        var rootUrl;
+        // Load Mobile
+        if (startedMobile) {
+            rootUrl = "Build/";
+        }
+        //Load Desktop
+        else {
+            rootUrl = "BuildDesktop/";
+        }
+        script.type = "text/javascript";
+        script.src = rootUrl + "docs.loader.js";
+        $("head").append(s);
+        createUnityInstance(document.querySelector("#unity-canvas"), {
+            dataUrl: rootUrl + "docs.data.gz",
+            frameworkUrl: rootUrl + "docs.framework.js.gz",
+            codeUrl: rootUrl + "docs.wasm.gz",
+            streamingAssetsUrl: "StreamingAssets",
+            companyName: "Sonnenmoor",
+            productName: "Sonnenmoor Gewinnspiel",
+            productVersion: "0.1",
+            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+        });
+    </script>
+    <script>
+        ///////// Handle cookies
+        var open = window.XMLHttpRequest.prototype.open,
+            send = window.XMLHttpRequest.prototype.send;
+        function openReplacement(method, url, async, user, password) {
+            this._url = url;
+            return open.apply(this, arguments);
+        }
+        function sendReplacement(data) {
+            if (this.onreadystatechange) {
+                this._onreadystatechange = this.onreadystatechange;
             }
-            const loader = document.querySelector("#loader");
-            if (!gameInstance.progress) {
-                const progress = document.querySelector("#loader .progress");
-                progress.style.display = "block";
-                gameInstance.progress = progress.querySelector(".full");
-                loader.querySelector(".spinner").style.display = "none";
-            }
-            gameInstance.progress.style.transform = `scaleX(${progress})`;
-            if (progress === 1 && !gameInstance.removeTimeout) {
-                gameInstance.removeTimeout = setTimeout(function () {
-                    loader.style.display = "none";
-                }, 2000);
+            this.onreadystatechange = onReadyStateChangeReplacement;
+            if (!this._url.includes("unity3d")) {
+                return send.apply(this, arguments);
             }
         }
-    }
-</script>
+        function onReadyStateChangeReplacement() {
+            if (this._onreadystatechange) {
+                return this._onreadystatechange.apply(this, arguments);
+            }
+        }
+        window.XMLHttpRequest.prototype.open = openReplacement;
+        window.XMLHttpRequest.prototype.send = sendReplacement;
+    </script>
+</body>
 </html>
