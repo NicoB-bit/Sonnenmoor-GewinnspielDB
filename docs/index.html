@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <title>Sonnenmoor Gewinnspiel</title>
+    <link rel="stylesheet" href="Assets/style.css">
     <style>
         @font-face {
             font-family: MainFont;
@@ -102,6 +103,10 @@
             width: 100vw !important;
             overflow: hidden;
         }
+
+            body * {
+                font-family: MainFont;
+            }
 
 
         @media (max-aspect-ratio : 16/9) {
@@ -297,6 +302,12 @@
             };
         </script>
     </div>
+    <div id="unity-loading-bar">
+        <div id="unity-logo"></div>
+        <div id="unity-progress-bar-empty">
+            <div id="unity-progress-bar-full"></div>
+        </div>
+    </div>
     <script>
         //fill the whole browser client area with the game canvas:
 
@@ -317,7 +328,6 @@
         else {
             startedMobile = false;
         }
-        const script = document.createElement('script');
         var ratio = height / width;
         var rootUrl;
         // Load Mobile
@@ -332,20 +342,31 @@
         else {
             rootUrl = "BuildDesktop/";
         }
-        script.type = "text/javascript";
-        script.src = rootUrl + "docs.loader.js";
-        $("head").append(script);
-        createUnityInstance(document.querySelector("#unity-canvas"), {
-            dataUrl: rootUrl + "docs.data",
-            frameworkUrl: rootUrl + "docs.framework.js",
-            codeUrl: rootUrl + "docs.wasm",
-            streamingAssetsUrl: "StreamingAssets",
-            companyName: "Sonnenmoor",
-            productName: "Sonnenmoor Gewinnspiel",
-            productVersion: "0.1",
-            // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
-            // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
-        });
+        var loadingBar = document.querySelector("#unity-loading-bar");
+        var loaderUrl = rootUrl + "/docsDefaultTemp.loader.js";
+        loadingBar.style.display = "block";
+        var script = document.createElement("script");
+        script.src = loaderUrl;
+        script.onload = () => {
+            createUnityInstance(document.querySelector("#unity-canvas"), {
+                dataUrl: rootUrl + "docs.data",
+                frameworkUrl: rootUrl + "docs.framework.js",
+                codeUrl: rootUrl + "docs.wasm",
+                streamingAssetsUrl: "StreamingAssets",
+                companyName: "Sonnenmoor",
+                productName: "Sonnenmoor Gewinnspiel",
+                productVersion: "0.1",
+                // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
+                // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
+            }, (progress) => {
+                progressBarFull.style.width = 100 * progress + "%";
+            }).then((unityInstance) => {
+                loadingBar.style.display = "none";
+            }).catch((message) => {
+                alert(message);
+            });
+        };
+        document.body.appendChild(script);
     </script>
 
 </body>
