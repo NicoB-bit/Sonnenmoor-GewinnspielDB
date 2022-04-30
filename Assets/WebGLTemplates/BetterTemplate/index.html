@@ -394,22 +394,10 @@
     // Load Mobile
     if (startedMobile) {
         script.src = 'Build/UnityLoader.js'
-        try {
-            window.screen.orientation.lock("portrait")
-        }
-        catch (err) {
-            console.log("Failed to lock...")
-        }
     }
     //Load Desktop
     else {
         script.src = 'BuildDesktop/UnityLoader.js'
-        try {
-            window.screen.orientation.lock("landscape")
-        }
-        catch (err) {
-            console.log("Failed to lock...")
-        }
     }
     document.body.append(script)
     ///////// Handle cookies
