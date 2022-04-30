@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en-us">
 
 <head>
@@ -132,6 +132,11 @@
             height: 100vh;
         }
 
+        input.checkbox {
+            width: 3vh;
+            height: 3vh;
+        }
+
         #termsDiv {
             font-size: 2.5vh;
             width: 80%;
@@ -261,16 +266,16 @@
                     <label for="email">
                         E-Mail*
                     </label><br>
-                    <input type="email" " name="email" id="email" placeholder="E-Mail" class="inputField" required>
+                    <input type="email" name="email" id="email" placeholder="E-Mail" class="inputField" required>
                 </div>
-                <input type="checkbox" id="terms" name="terms" value="terms" required>
+                <input type="checkbox" class="checkbox" id="terms" name="terms" value="terms" required>
                 <label for="terms">
                     * <b>
                         Ja, ich akzeptiere die Teilnahmebedingungen.
                     </b>
                 </label><br>
                 <p class="linkTerms"><u>Hier zu den Teilnahmebedingungen.</u></p>
-                <input type="checkbox" id="notifications" name="notifications" value="notifications">
+                <input type="checkbox" class="checkbox" id="notifications" name="notifications" value="notifications">
                 <label for="notifications">
                     <b>SonnenMoor Newsletter:</b> Ich möchte gerne weitere Informationen über Gesundheit, Moor und Kräuter von Sonnenmoor erhalten.
                 </label><br>
@@ -290,14 +295,14 @@
                 Veranstalter
                 Veranstalter dieses Gewinnspiels ist die SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstraße
                 14, 5102 Anthering. Mit der Teilnahme am Gewinnspiel erklärt sich der Teilnehmer mit den folgenden Bestimmungen und Teilnahmebedingungen einverstanden: Die Teilnahme an diesem Gewinnspiel ist kostenlos und unabhängig davon, ob Sie die Dienstleistungen oder Produkte der SonnenMoor Vertriebs- und Verwertungs-GmbH nutzen.
-                Teilnehmer im Sinne des Gewinnspiels ist diejenige natürliche Person, die im Teilnahmezeitraum die die im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind natürliche Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Angestellte des Veranstalters und Mitarbeiter von Partnerunternehmen sind von der Teilnahme ausgeschlossen. Das Gewinnspiel beginnt am 1.10. um 8 Uhr und endet am 29.10. 8 Uhr (Teilnahmezeitraum). Im Fall einer schuldhaften Verletzung der Teilnahmebedingungen ist der Veranstalter berechtigt, den Teilnehmer mit sofortiger Wirkung auszuschließen.
+                Teilnehmer im Sinne des Gewinnspiels ist diejenige natürliche Person, die im Teilnahmezeitraum die die im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind natürliche Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Angestellte des Veranstalters und Mitarbeiter von Partnerunternehmen sind von der Teilnahme ausgeschlossen. Das Gewinnspiel beginnt am 03.05.2022 um 8 Uhr und endet am 15.07.2022 8 Uhr (Teilnahmezeitraum). Im Fall einer schuldhaften Verletzung der Teilnahmebedingungen ist der Veranstalter berechtigt, den Teilnehmer mit sofortiger Wirkung auszuschließen.
                 III. Gewinn und Gewinnermittlung
                 Je nach Ihrem erfolgreichen Punkte-Score nehmen Sie an der Verlosung folgender
                 Moor- und Kräuterschätze teil:
-                28-31 Punkte Verlosung von 5 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 150,--
-                21-27 Punkte Verlosung von 10 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 100,--
-                15-20 Punkte Verlosung von 15 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 50,--
-                Die Ziehung der Gewinner erfolgt am 3.11.2021. Die Gewinner werden schriftlich per Email Nachricht kontaktiert. Bestätigt der Gewinner den Gewinn nicht innerhalb von fünf Werktagen, so verfällt der Gewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren als Gewinner ermittelt. Der Gewinnanspruch ist nicht übertragbar. Eine Barauszahlung, Änderung oder Umtausch des Gewinns ist ausgeschlossen. Sämtliche mit dem Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden Betriebs-, Neben- und Folgekosten trägt der Teilnehmer.
+                28-31 Punkte Verlosung von 3 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 150,-- &euro;
+                21-27 Punkte Verlosung von 5 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 100,-- &euro;
+                15-20 Punkte Verlosung von 10 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 50,-- &euro;
+                Die Ziehung der Gewinner erfolgt am 15.07.2022. Die Gewinner werden schriftlich per Email Nachricht kontaktiert. Bestätigt der Gewinner den Gewinn nicht innerhalb von fünf Werktagen, so verfällt der Gewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren als Gewinner ermittelt. Der Gewinnanspruch ist nicht übertragbar. Eine Barauszahlung, Änderung oder Umtausch des Gewinns ist ausgeschlossen. Sämtliche mit dem Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden Betriebs-, Neben- und Folgekosten trägt der Teilnehmer.
                 Datensicherheit und Datenschutz
                 Die personenbezogenen Daten der Teilnehmer werden vom Veranstalter unter Beachtung der datenschutzrechtlichen Bestimmungen genutzt und erhoben. Die personenbezogenen Daten beinhalten Namen und die E-Mail-Adresse.
                 Nach Registrierung Ihrer Daten erfolgt eine Verarbeitung der oben angeführten Daten durch den datenschutzrechtlich Verantwortlichen SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstraße
@@ -374,14 +379,7 @@
     </div>
 </body>
 <script>
-    // Handle Divs focus
-    var gameContainer = $('#gameContainer');
-    gameContainer.onpointerdown = function () {
-        var div = document.activeElement;
-        div.blur();
-    }
     var startedMobile
-    window.addEventListener('resize', checkRatio);
     var width = window.innerWidth
     var height = window.innerHeight
     var startRatio = height / width
@@ -391,30 +389,17 @@
     else {
         startedMobile = false
     }
-    function checkRatio() {
-        var width = window.innerWidth
-        var height = window.innerHeight
-        var ratio = height / width
-        var isMobileNow
-        if (ratio >= 1) {
-            isMobileNow = true
-        }
-        else {
-            isMobileNow = false
-        }
-        if (isMobileNow != startedMobile) {
-            location = location
-        }
-    }
     const script = document.createElement('script')
     var ratio = height / width
     // Load Mobile
     if (startedMobile) {
         script.src = 'Build/UnityLoader.js'
+        window.screen.orientation.lock("portrait")
     }
     //Load Desktop
     else {
         script.src = 'BuildDesktop/UnityLoader.js'
+        window.screen.orientation.lock("landscape")
     }
     document.body.append(script)
     ///////// Handle cookies
@@ -440,6 +425,7 @@
     }
     window.XMLHttpRequest.prototype.open = openReplacement;
     window.XMLHttpRequest.prototype.send = sendReplacement;
+    /////////////////////////////
     // Onload
     script.onload = () => {
         // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
