@@ -299,7 +299,7 @@
         }
         script.type = "text/javascript";
         script.src = rootUrl + "docs.loader.js";
-        $("head").append(s);
+        $("head").append(script);
         createUnityInstance(document.querySelector("#unity-canvas"), {
             dataUrl: rootUrl + "docs.data.gz",
             frameworkUrl: rootUrl + "docs.framework.js.gz",
