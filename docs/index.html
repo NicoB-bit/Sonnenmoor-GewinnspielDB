@@ -273,10 +273,7 @@
     </div>
     <script>
         //fill the whole browser client area with the game canvas:
-        var meta = document.createElement('meta');
-        meta.name = 'viewport';
-        meta.content = 'initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
-        document.getElementsByTagName('head')[0].appendChild(meta);
+
 
         /*var meta = document.createElement('meta');
         meta.name = 'viewport';
@@ -289,16 +286,20 @@
         var height = window.innerHeight
         var startRatio = height / width
         if (startRatio >= 1) {
-            startedMobile = true
+            startedMobile = true;
         }
         else {
-            startedMobile = false
+            startedMobile = false;
         }
         const script = document.createElement('script');
         var ratio = height / width;
         var rootUrl;
         // Load Mobile
         if (startedMobile) {
+            var meta = document.createElement('meta');
+            meta.name = 'viewport';
+            meta.content = 'initial-scale=1.0, user-scalable=no, shrink-to-fit=yes';
+            document.getElementsByTagName('head')[0].appendChild(meta);
             rootUrl = "Build/";
         }
         //Load Desktop
@@ -319,8 +320,6 @@
             // matchWebGLToCanvasSize: false, // Uncomment this to separately control WebGL canvas render size and DOM element size.
             // devicePixelRatio: 1, // Uncomment this to override low DPI rendering on high DPI displays.
         });
-    </script>
-    <script>
         ///////// Handle cookies
         var open = window.XMLHttpRequest.prototype.open,
             send = window.XMLHttpRequest.prototype.send;
@@ -334,6 +333,7 @@
             }
             this.onreadystatechange = onReadyStateChangeReplacement;
             if (!this._url.includes("unity3d")) {
+                console.log(this._url);
                 return send.apply(this, arguments);
             }
         }
