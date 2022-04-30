@@ -149,24 +149,20 @@
         var open = window.XMLHttpRequest.prototype.open,
             send = window.XMLHttpRequest.prototype.send;
         function openReplacement(method, url, async, user, password) {
-            console.log("h2i");
             this._url = url;
             return open.apply(this, arguments);
         }
         function sendReplacement(data) {
-            console.log("hi");
             if (this.onreadystatechange) {
                 this._onreadystatechange = this.onreadystatechange;
             }
             this.onreadystatechange = onReadyStateChangeReplacement;
             if (!this._url.includes("unity3d")) {
-                console.log(this._url);
                 return send.apply(this, arguments);
             }
         }
         function onReadyStateChangeReplacement() {
             if (this._onreadystatechange) {
-                console.log("hi2");
                 return this._onreadystatechange.apply(this, arguments);
             }
         }
