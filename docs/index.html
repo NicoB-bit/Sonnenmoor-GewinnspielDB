@@ -279,7 +279,7 @@
                         data: { email: $("#email").val(), username: name, points: window.points },
                         type: "POST",
                         processData: true,
-                        contentType: false,
+                        dataType: "application/x-www-form-urlencoded",
                         success: function (result) {
                             $("#finished").show();
                             $("#registration").hide();
