@@ -285,9 +285,9 @@
                             $("#registration").hide();
                         },
                         error: function (xhr) {
-                            if(xhr.statusText == "User with this email already exist.")
+                            if(xhr.responseText == "User with this email already exist.")
                                 $("#finishedText").text("Ein Benutzer mit dieser E-Mail Adresse ist bereits registriert.")
-                            else if(xhr.statusText != "Success")
+                            else if(xhr.responseText != "Success")
                                 $("#finishedText").text("Leider hat etwas nicht funktioniert. Bitte versuchen Sie es später erneut.")
                             $("#finished").show();
                             $("#registration").hide();
