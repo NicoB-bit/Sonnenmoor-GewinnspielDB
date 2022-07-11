@@ -220,14 +220,14 @@
                 Veranstalter
                 Veranstalter dieses Gewinnspiels ist die SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstraße
                 14, 5102 Anthering. Mit der Teilnahme am Gewinnspiel erklärt sich der Teilnehmer mit den folgenden Bestimmungen und Teilnahmebedingungen einverstanden: Die Teilnahme an diesem Gewinnspiel ist kostenlos und unabhängig davon, ob Sie die Dienstleistungen oder Produkte der SonnenMoor Vertriebs- und Verwertungs-GmbH nutzen.
-                Teilnehmer im Sinne des Gewinnspiels ist diejenige natürliche Person, die im Teilnahmezeitraum die die im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind natürliche Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Angestellte des Veranstalters und Mitarbeiter von Partnerunternehmen sind von der Teilnahme ausgeschlossen. Das Gewinnspiel beginnt am 03.05.2022 um 8 Uhr und endet am 15.07.2022 8 Uhr (Teilnahmezeitraum). Im Fall einer schuldhaften Verletzung der Teilnahmebedingungen ist der Veranstalter berechtigt, den Teilnehmer mit sofortiger Wirkung auszuschließen.
+                Teilnehmer im Sinne des Gewinnspiels ist diejenige natürliche Person, die im Teilnahmezeitraum die die im Spiel eingebauten Fragen beantwortet. Teilnahmeberechtigt sind natürliche Personen, die zum Zeitpunkt der Teilnahme mindestens 18 Jahre alt sind. Angestellte des Veranstalters und Mitarbeiter von Partnerunternehmen sind von der Teilnahme ausgeschlossen. Das Gewinnspiel beginnt am 03.05.2022 um 8 Uhr und endet am 31.08.2022 8 Uhr (Teilnahmezeitraum). Im Fall einer schuldhaften Verletzung der Teilnahmebedingungen ist der Veranstalter berechtigt, den Teilnehmer mit sofortiger Wirkung auszuschließen.
                 III. Gewinn und Gewinnermittlung
                 Je nach Ihrem erfolgreichen Punkte-Score nehmen Sie an der Verlosung folgender
                 Moor- und Kräuterschätze teil:
                 28-31 Punkte Verlosung von 3 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 150,-- &euro;
                 21-27 Punkte Verlosung von 5 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 100,-- &euro;
                 15-20 Punkte Verlosung von 10 Geschenkboxen mit Moor- und Kräuterschätzen im Wert von 50,-- &euro;
-                Die Ziehung der Gewinner erfolgt am 15.07.2022. Die Gewinner werden schriftlich per Email Nachricht kontaktiert. Bestätigt der Gewinner den Gewinn nicht innerhalb von fünf Werktagen, so verfällt der Gewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren als Gewinner ermittelt. Der Gewinnanspruch ist nicht übertragbar. Eine Barauszahlung, Änderung oder Umtausch des Gewinns ist ausgeschlossen. Sämtliche mit dem Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden Betriebs-, Neben- und Folgekosten trägt der Teilnehmer.
+                Die Ziehung der Gewinner erfolgt am 31.08.2022. Die Gewinner werden schriftlich per Email Nachricht kontaktiert. Bestätigt der Gewinner den Gewinn nicht innerhalb von fünf Werktagen, so verfällt der Gewinn und ein anderer Teilnehmer wird durch ein erneutes Losverfahren als Gewinner ermittelt. Der Gewinnanspruch ist nicht übertragbar. Eine Barauszahlung, Änderung oder Umtausch des Gewinns ist ausgeschlossen. Sämtliche mit dem Gewinn oder seiner Entgegennahme bzw. Nutzung entstehenden Betriebs-, Neben- und Folgekosten trägt der Teilnehmer.
                 Datensicherheit und Datenschutz
                 Die personenbezogenen Daten der Teilnehmer werden vom Veranstalter unter Beachtung der datenschutzrechtlichen Bestimmungen genutzt und erhoben. Die personenbezogenen Daten beinhalten Namen und die E-Mail-Adresse.
                 Nach Registrierung Ihrer Daten erfolgt eine Verarbeitung der oben angeführten Daten durch den datenschutzrechtlich Verantwortlichen SonnenMoor Vertriebs- und Verwertungs-GmbH, Landstraße
@@ -284,9 +284,12 @@
                             $("#finished").show();
                             $("#registration").hide();
                         },
-                        error: function (request, status, errorThrown) {
+                        error: function (xhr) {
+                            if(xhr.statusText == "User with this email already exist.")
+                                $("#finishedText").text("Ein Benutzer mit dieser E-Mail Adresse ist bereits registriert.")
+                            else if(xhr.statusText != "Success")
+                                $("#finishedText").text("Leider hat etwas nicht funktioniert. Bitte versuchen Sie es später erneut.")
                             $("#finished").show();
-                            $("#finishedText").text("Leider hat etwas nicht funktioniert. Bitte versuchen Sie es später erneut.")
                             $("#registration").hide();
                         }
                     })
